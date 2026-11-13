@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bx64p8jsj1aww"]
+
+[node name="Label" type="Label" unique_id=793450889]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "C ma scene pour test pas touche (attention aux merge conflicts)"

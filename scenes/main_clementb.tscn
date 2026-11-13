@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dbuv1appmvik7"]
+
+[ext_resource type="PackedScene" uid="uid://bx64p8jsj1aww" path="res://entities/super_label_moche_test/label_moche.tscn" id="1_45k4w"]
+[ext_resource type="Script" uid="uid://cjm06b37x108q" path="res://entities/super_label_moche_test/label_moche.gd" id="2_seirh"]
+
+[node name="Node2D" type="Node2D" unique_id=1947861403]
+
+[node name="Label" parent="." unique_id=793450889 instance=ExtResource("1_45k4w")]
+script = ExtResource("2_seirh")
