@@ -5,8 +5,8 @@ extends Node
 
 
 signal box_moved(box: Box);
-# Exemples variable globale
 signal naration_label;
+signal test_crepiere;
 
 var current_level : int = 0
 var last_direction : Direction = Direction.NONE
@@ -98,6 +98,8 @@ signal toggle_crouch_player;
 func _on_toggle_crouch_player():
 	crouched = !crouched
 	print("Crouch état : " + str(crouched))
+	if crouched:
+		test_crepiere.emit()
 
 func restart_level():
 	get_tree().reload_current_scene()

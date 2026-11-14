@@ -33,7 +33,6 @@ func _on_player_moved(_direction, player_position):
 		
 	if color == current_color:
 		count_color += 1;
-		# print(count_color)
 	else:
 		count_color = 1;
 	current_color = color

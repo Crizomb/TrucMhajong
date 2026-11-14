@@ -8,8 +8,10 @@ class_name Crepiere
 
 
 var buttons: Array[GameButton] = []
+var current_area: Area2D
 
 func _ready():
+	Global.test_crepiere.connect(_test_crepiere)
 	var nodes_temp : Array[Node] = get_tree().get_nodes_in_group("button")
 	for btn in nodes_temp:
 		if btn is GameButton:
@@ -35,8 +37,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_area_entered(area: Area2D) -> void:
-	if area is Player and _is_activated:
-		print("Crepiere activé + joueur dessus")
+	current_area = area
+
+func _test_crepiere():
+	if current_area is Player and _is_activated:
+		print("Crepiere activé + joueur crouched dessus")
 		Global.change_level.emit()
 
 func _on_one_of_btn_changed():
