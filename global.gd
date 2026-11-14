@@ -9,6 +9,7 @@ var current_level : int = 0
 var last_direction : Direction = Direction.NONE
 var direction_counter : int = 0
 var kill_counter : int = 0
+var crouched : bool = false
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
 
 # Exemple signal global
@@ -19,6 +20,7 @@ func _ready():
 	change_level.connect(_on_change_level)
 	kill_player.connect(_on_kill_player)
 	player_moved.connect(_on_player_moved)
+	toggle_crouch_player.connect(_on_toggle_crouch_player)
 
 func _on_change_level():
 	current_level += 1
@@ -49,3 +51,11 @@ func _on_kill_player():
 	last_direction = Direction.NONE
 	direction_counter = 0
 	kill_counter += 1
+	crouched = false
+
+# Signal pour le changement de crouch
+signal toggle_crouch_player;
+
+func _on_toggle_crouch_player():
+	crouched = !crouched
+	print("Crouch état : " + str(crouched))

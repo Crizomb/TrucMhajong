@@ -21,11 +21,16 @@ func get_direction_input() -> Global.Direction:
 	
 	return direction;
 
+func toggle_crouch_if_pressed():
+	if Input.is_action_just_pressed("ToggleCrouch"):
+		Global.toggle_crouch_player.emit()
+
 func _process(delta: float) -> void:
 	var direction := get_direction_input()
 	move_direction(direction)
 	if direction != Global.Direction.NONE:
 		Global.player_moved.emit(direction)
+	toggle_crouch_if_pressed()
 
 
 func move_direction(direction: Global.Direction):
