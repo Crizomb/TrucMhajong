@@ -2,9 +2,20 @@
 
 [ext_resource type="Script" uid="uid://dqylixwu81fxk" path="res://entities/crepiere/crepiere.gd" id="1_erkw8"]
 
+[sub_resource type="Gradient" id="Gradient_erkw8"]
+offsets = PackedFloat32Array(0, 0.67416686)
+colors = PackedColorArray(0.017985078, 0.13451582, 0.3108947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4658o"]
+gradient = SubResource("Gradient_erkw8")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.48699585, 0.45683092)
+
 [sub_resource type="Gradient" id="Gradient_x7t00"]
 offsets = PackedFloat32Array(0, 0.67416686)
-colors = PackedColorArray(0.6444288, 0, 0.00899968, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.8370949, 0, 0.24472982, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_k228g"]
 gradient = SubResource("Gradient_x7t00")
@@ -21,14 +32,14 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_erkw8")
 
 [node name="CrepeOff" type="TextureRect" parent="." unique_id=492153543]
-visible = false
 offset_left = -125.0
 offset_top = -117.0
 offset_right = 131.0
 offset_bottom = 139.0
-texture = SubResource("GradientTexture2D_k228g")
+texture = SubResource("GradientTexture2D_4658o")
 
 [node name="CrepeOn" type="TextureRect" parent="." unique_id=11875234]
+visible = false
 offset_left = -125.0
 offset_top = -117.0
 offset_right = 131.0

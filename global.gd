@@ -62,7 +62,7 @@ enum DeathReason {
 
 signal player_moved;
 
-func _on_player_moved(direction, position):
+func _on_player_moved(direction, _player_position):
 	movement_counter += 1
 	if movement_counter >= 24+1:
 		kill_player.emit(DeathReason.TWENTY_FIVE_MOVEMENTS)
@@ -96,3 +96,4 @@ func _on_toggle_crouch_player():
 
 func restart_level():
 	get_tree().reload_current_scene()
+	

@@ -1,10 +1,24 @@
 extends Node2D
 class_name Crepiere
 
-var _is_activated := true
+var _is_activated := false
 # Called when the node enters the scene tree for the first time.
 @onready var crepe_off: TextureRect = $CrepeOff
 @onready var crepe_on: TextureRect = $CrepeOn
+
+
+var buttons: Array[GameButton] = []
+
+func _ready():
+	var nodes_temp : Array[Node] = get_tree().get_nodes_in_group("button")
+	for btn in nodes_temp:
+		if btn is GameButton:
+			buttons.append(btn)
+			btn.button_pressed.connect(_on_one_of_btn_changed)
+			btn.button_unpressed.connect(_on_one_of_btn_changed)
+	
+	if not buttons:
+		activate()
 
 func activate():
 	crepe_off.visible = false
@@ -15,10 +29,6 @@ func deactivate():
 	crepe_off.visible = true
 	crepe_on.visible = false
 	_is_activated = false
-	
-func _ready() -> void:
-	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,8 +38,18 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is Player and _is_activated:
 		print("Crepiere activé + joueur dessus")
 		Global.change_level.emit()
-		
 
-
-func _on_area_exited(area: Area2D) -> void:
-	pass # Replace with function body.
+func _on_one_of_btn_changed():
+	await get_tree().process_frame
+	var all_pressed := true
+	for btn in buttons:
+		print(btn.is_pressed)
+		if not btn.is_pressed:
+			all_pressed = false
+	
+	print("all pressed")
+	print(all_pressed)
+	if all_pressed:
+		activate()
+	else:
+		deactivate()
