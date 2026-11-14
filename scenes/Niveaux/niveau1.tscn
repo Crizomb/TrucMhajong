@@ -77,18 +77,6 @@ corner_radius_bottom_left = 16
 texture = ExtResource("9_fnsis")
 modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43m85"]
-bg_color = Color(0.13319641, 0.13319641, 0.13319635, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
 [node name="Node2D" type="Node2D" unique_id=1947861403]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
@@ -249,23 +237,6 @@ offset_transform_enabled = true
 offset_transform_position = Vector2(-100, 0)
 texture = ExtResource("9_fnsis")
 expand_mode = 1
-
-[node name="Button" type="Button" parent="." unique_id=1966388548]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -119.0
-offset_top = 260.0
-offset_right = 502.0
-offset_bottom = 373.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 37
-theme_override_styles/normal = SubResource("StyleBoxFlat_43m85")
-text = "\"Tu es mort de cause inconnue...\""
-autowrap_mode = 2
 
 [connection signal="button_up" from="Pause_menu/Menu_buttons/Resume" to="Pause_menu" method="_on_resume_button_up"]
 [connection signal="button_down" from="Pause_menu/Menu_buttons/Options" to="Pause_menu" method="_on_options_button_down"]
