@@ -101,6 +101,7 @@ position = Vector2(327, 60)
 rotation = 5.270164e-05
 
 [node name="Pause_menu" type="Control" parent="." unique_id=1886887544]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -143,6 +144,7 @@ grow_vertical = 2
 theme_override_constants/separation = 15
 
 [node name="Resume" type="Button" parent="Pause_menu/Menu_buttons" unique_id=943224377]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 46
