@@ -3,6 +3,18 @@
 [ext_resource type="Script" uid="uid://he57fleedmfc" path="res://entities/naration/label.gd" id="1_h2h6e"]
 [ext_resource type="AudioStream" uid="uid://c5xr7433fwepw" path="res://sound_music/naration/template.wav" id="2_rufhj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htawy"]
+bg_color = Color(0.13319641, 0.13319641, 0.13319635, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
 [node name="Naration" type="Control" unique_id=740026850]
 layout_mode = 3
 anchors_preset = 15
@@ -10,13 +22,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Label" type="Label" parent="." unique_id=2085116337]
-layout_mode = 0
-offset_right = 170.0
-offset_bottom = 23.0
-text = "Naration label"
 script = ExtResource("1_h2h6e")
 
-[node name="template" type="AudioStreamPlayer2D" parent="Label" unique_id=462565774]
+[node name="Button" type="Button" parent="." unique_id=129380547]
+z_index = 4096
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = -73.0
+offset_top = 255.0
+offset_right = 548.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_htawy")
+text = "\"Tu es mort de cause inconnue...\""
+autowrap_mode = 2
+
+[node name="template" type="AudioStreamPlayer2D" parent="." unique_id=462565774]
 stream = ExtResource("2_rufhj")

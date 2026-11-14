@@ -10,9 +10,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Escape"):
-		pause_menu.visible = !pause_menu.visible
+		if pause_menu.visible:
+			get_tree().paused = false
+			pause_menu.visible = false
+		else:
+			get_tree().paused = true
+			pause_menu.visible = true
 
 func _on_resume_button_up() -> void:
+	get_tree().paused = false
 	pause_menu.visible = false
 
 func _on_options_button_up() -> void:

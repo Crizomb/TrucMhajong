@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="MahjongTruc"
-run/main_scene="uid://d0eeuqs6fyjrf"
+run/main_scene="uid://b7hnubkfb05sj"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*uid://di2h1hd30mcdx"
+Naration="*uid://bef70jq2kewgg"
 
 [global_group]
 

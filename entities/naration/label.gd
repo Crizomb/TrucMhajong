@@ -1,7 +1,8 @@
-extends Label
+extends Control
 
 @onready var audio_template : AudioStreamPlayer2D = $template
 
+@onready var button: Button = $Button
 
 @onready var naration_dict : Dictionary[Global.DeathReason, Array] = {
 	Global.DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION : ["Tu es mort de cause inconnue...", audio_template],
@@ -14,10 +15,9 @@ extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	text = ""
-	visible = false
+	button.text = "non vide"
+	button.visible = false
 	Global.naration_label.connect(_on_naration_label)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
@@ -25,10 +25,10 @@ func _process(delta: float) -> void:
 	pass
 
 func show_text(s: String, time: float):
-	text = s
-	visible = true
+	button.text = s
+	button.visible = true
 	await get_tree().create_timer(time).timeout
-	visible = false
+	button.visible = false
 
 func _on_naration_label(t : Global.DeathReason):
 	var metadata = naration_dict.get(t, naration_dict[Global.DeathReason.UNKNOWN])
