@@ -2,10 +2,10 @@ extends TileMapLayer
 @onready var player: Area2D = $"../Player"
 
 
-enum CaseColor {BLUE, GREEN, RED, YELLOW}
+enum CaseColor {NULL, BLUE, GREEN, RED, YELLOW}
 var CaseDict : Dictionary[Vector2i, CaseColor] = {Vector2i(3, 0) : CaseColor.GREEN, Vector2i(5, 0): CaseColor.BLUE}
 
-func get_player_case_color(position: Vector2):
+func get_player_case_color(position: Vector2) -> CaseColor:
 	var player_int_pos := local_to_map(position)
 	var atlas_cords := get_cell_atlas_coords(player_int_pos)
 	return CaseDict[atlas_cords]
@@ -13,9 +13,25 @@ func get_player_case_color(position: Vector2):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Global.player_moved.connect(_on_player_moved)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(get_player_case_color(player.position))
+	# print(get_player_case_color(player.position))
+	pass
+
+var current_color : CaseColor = CaseColor.NULL
+var count_color := 0
+func _on_player_moved(_direction, player_position):
+	print("player moved")
+	var color := get_player_case_color(player_position)
+	if color == current_color:
+		count_color += 1;
+		print(count_color)
+	else:
+		count_color = 1;
+	current_color = color
+
+	if count_color >= 4+1:
+		Global.kill_player.emit()

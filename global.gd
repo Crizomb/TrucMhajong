@@ -33,7 +33,7 @@ enum Direction {LEFT, RIGHT, UP, DOWN, NONE};
 
 signal player_moved;
 
-func _on_player_moved(direction):
+func _on_player_moved(direction, position):
 	if direction != last_direction:
 		direction_counter = 1
 	else:

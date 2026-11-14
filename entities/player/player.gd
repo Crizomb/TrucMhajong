@@ -29,9 +29,8 @@ func _process(delta: float) -> void:
 	var direction := get_direction_input()
 	move_direction(direction)
 	if direction != Global.Direction.NONE:
-		Global.player_moved.emit(direction)
+		Global.player_moved.emit(direction, position)
 	toggle_crouch_if_pressed()
-
 
 func move_direction(direction: Global.Direction):
 	
