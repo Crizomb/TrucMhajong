@@ -1,30 +1,38 @@
 [gd_scene format=3 uid="uid://bbbkrl5xihend"]
 
 [ext_resource type="Script" uid="uid://itycuqlsqq0y" path="res://entities/player/player.gd" id="1_abrql"]
-[ext_resource type="Texture2D" uid="uid://4cn5k0vmbjsq" path="res://entities/player/character.png" id="1_symyc"]
+[ext_resource type="Texture2D" uid="uid://cnob3cy3gwje6" path="res://entities/player/chongqing_crepe.png" id="3_bls4j"]
+[ext_resource type="Texture2D" uid="uid://cw6c2w47md6qi" path="res://entities/player/chongqing.png" id="3_sglur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
-size = Vector2(256, 256)
+size = Vector2(115, 115)
 
 [node name="Player" type="Area2D" unique_id=1962365068]
 script = ExtResource("1_abrql")
 TileSize = 256
 
-[node name="Character" type="Sprite2D" parent="." unique_id=29876782]
-scale = Vector2(16, 16)
-texture = ExtResource("1_symyc")
-
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=798693242]
-target_position = Vector2(0, 256)
+target_position = Vector2(0, 128)
 
 [node name="RayCastUp" type="RayCast2D" parent="." unique_id=412011709]
-target_position = Vector2(0, -256)
+target_position = Vector2(0, -128)
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=433334395]
-target_position = Vector2(256, 0)
+target_position = Vector2(128, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=666579599]
-target_position = Vector2(-256, 0)
+target_position = Vector2(-128, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396278302]
 shape = SubResource("RectangleShape2D_k228g")
+
+[node name="Chongqing" type="Sprite2D" parent="." unique_id=158791497]
+position = Vector2(0, -5.9604645e-08)
+scale = Vector2(0.28190103, 0.29427084)
+texture = ExtResource("3_sglur")
+
+[node name="Chongqing_crepe" type="Sprite2D" parent="." unique_id=1535158086]
+visible = false
+position = Vector2(0, 10.999999)
+scale = Vector2(0.28190103, 0.29427084)
+texture = ExtResource("3_bls4j")
