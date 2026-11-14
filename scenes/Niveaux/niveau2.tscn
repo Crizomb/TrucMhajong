@@ -46,7 +46,7 @@ script = ExtResource("2_a3uc7")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(61, -68)
 
-[node name="Button" parent="." unique_id=454183045 instance=ExtResource("5_0p4xx")]
+[node name="Button" parent="." unique_id=454183045 groups=["button"] instance=ExtResource("5_0p4xx")]
 position = Vector2(66, -184)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("6_wmj4b")]

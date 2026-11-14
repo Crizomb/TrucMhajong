@@ -32,6 +32,8 @@ func _on_change_level():
 	current_level += 1
 	print("Le nouveau current_level : ")
 	print(current_level)
+	assert(current_level < levels.size(), "Bro there is no next level, pls stop")
+	get_tree().change_scene_to_file(levels[current_level]);
 
 func init_player_state():
 	last_direction = Direction.NONE
@@ -97,3 +99,9 @@ func _on_toggle_crouch_player():
 func restart_level():
 	get_tree().reload_current_scene()
 	
+# Gestion des niveaux
+var levels = [
+	"res://scenes/Niveaux/niveau1.tscn",
+	"res://scenes/Niveaux/niveau2.tscn",
+	"res://scenes/Niveaux/niveau3.tscn",
+]

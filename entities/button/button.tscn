@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
 size = Vector2(120, 120)
 
-[node name="Button" type="Area2D" unique_id=1561398429]
+[node name="Button" type="Area2D" unique_id=1561398429 groups=["button"]]
 script = ExtResource("1_6bgj0")
 
 [node name="ButtonOff" type="Sprite2D" parent="." unique_id=266803081]

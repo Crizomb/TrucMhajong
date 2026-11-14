@@ -1,7 +1,7 @@
 extends Node2D
 class_name Crepiere
 
-var _is_activated := false
+@export var _is_activated := false
 # Called when the node enters the scene tree for the first time.
 @onready var crepe_off: TextureRect = $CrepeOff
 @onready var crepe_on: TextureRect = $CrepeOn
@@ -40,7 +40,9 @@ func _on_area_entered(area: Area2D) -> void:
 		Global.change_level.emit()
 
 func _on_one_of_btn_changed():
-	await get_tree().process_frame
+	var tree = get_tree()
+	if tree:
+		await tree.process_frame
 	var all_pressed := true
 	for btn in buttons:
 		print(btn.is_pressed)

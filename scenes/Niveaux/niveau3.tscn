@@ -47,7 +47,7 @@ script = ExtResource("2_252t6")
 position = Vector2(140, 73)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Button" parent="." unique_id=454183045 instance=ExtResource("3_k7rqr")]
+[node name="Button" parent="." unique_id=454183045 groups=["button"] instance=ExtResource("3_k7rqr")]
 position = Vector2(453, 451)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("4_3s71w")]
