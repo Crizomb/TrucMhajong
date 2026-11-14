@@ -8,6 +8,7 @@ extends Node
 var current_level : int = 0
 var last_direction : Direction = Direction.NONE
 var direction_counter : int = 0
+var kill_counter : int = 0
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
 
 # Exemple signal global
@@ -47,3 +48,4 @@ func _on_kill_player():
 	print("Le joueur est mort")
 	last_direction = Direction.NONE
 	direction_counter = 0
+	kill_counter += 1
