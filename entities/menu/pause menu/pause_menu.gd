@@ -1,6 +1,7 @@
 extends Control
 
 @onready var big_lock: Panel = $Big_lock
+@onready var pause_menu: Control = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,12 +9,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-var level = "level_23" # à compléter, doit matcher le niveau d'où l'on vient
+	if Input.is_action_just_pressed("Escape"):
+		pause_menu.visible = !pause_menu.visible
 
 func _on_resume_button_up() -> void:
-	get_tree().change_scene_to_file("res://scenes/" + level + ".tscn")
+	pause_menu.visible = false
 
 func _on_options_button_up() -> void:
 	big_lock.visible = false
