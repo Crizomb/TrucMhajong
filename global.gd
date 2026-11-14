@@ -4,6 +4,7 @@ extends Node
 # Accessible via : Globals.
 
 # Exemples variable globale
+signal naration_label;
 
 var current_level : int = 0
 var last_direction : Direction = Direction.NONE
@@ -40,6 +41,7 @@ func init_player_state():
 enum Direction {LEFT, RIGHT, UP, DOWN, NONE};
 
 enum DeathReason {
+	UNKNOWN,
 	FIVE_MOVEMENTS_SAME_DIRECTION,
 	TWENTY_FIVE_MOVEMENTS
 };
@@ -66,6 +68,7 @@ signal kill_player;
 
 func _on_kill_player(reason : DeathReason):
 	print("Le joueur est mort : " + str(reason))
+	naration_label.emit(reason)
 	init_player_state()
 	kill_counter += 1
 

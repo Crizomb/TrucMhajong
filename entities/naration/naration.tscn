@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bef70jq2kewgg"]
+
+[ext_resource type="Script" uid="uid://he57fleedmfc" path="res://entities/naration/label.gd" id="1_h2h6e"]
+[ext_resource type="AudioStream" uid="uid://c5xr7433fwepw" path="res://sound_music/naration/template.wav" id="2_rufhj"]
+
+[node name="Naration" type="Control" unique_id=740026850]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=2085116337]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 23.0
+text = "Naration label"
+script = ExtResource("1_h2h6e")
+
+[node name="template" type="AudioStreamPlayer2D" parent="Label" unique_id=462565774]
+stream = ExtResource("2_rufhj")
