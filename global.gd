@@ -3,6 +3,8 @@ extends Node
 # Ici on mets des trucs globaux.
 # Accessible via : Globals.
 
+
+signal box_moved(box: Box);
 # Exemples variable globale
 signal naration_label;
 

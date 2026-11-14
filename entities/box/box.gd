@@ -1,12 +1,16 @@
 extends StaticBody2D;
+class_name Box;
 
 @onready var RayCastRight : RayCast2D = $RayCastRight;
 @onready var RayCastDown : RayCast2D = $RayCastDown;
 @onready var RayCastUp : RayCast2D = $RayCastUp;
 @onready var RayCastLeft : RayCast2D = $RayCastLeft;
 
-var box_movement := 128
+@onready var crate: Sprite2D = $Crate
+@onready var crate_morte: Sprite2D = $CrateMorte
 
+var box_movement := 128
+var is_drawning := false
 
 func go_right() -> bool:
 	var can_move := true;
@@ -18,7 +22,8 @@ func go_right() -> bool:
 			can_move = false;
 	
 	if can_move:
-		position.x += box_movement;
+		position.x += box_movement
+		Global.box_moved.emit(self)
 	
 	return can_move;
 
@@ -34,6 +39,7 @@ func go_left() -> bool:
 	
 	if can_move:
 		position.x -= box_movement;
+		Global.box_moved.emit(self)
 	
 	return can_move;
 	
@@ -48,6 +54,7 @@ func go_up() -> bool:
 	
 	if can_move:
 		position.y -= box_movement;
+		Global.box_moved.emit(self)
 	
 	return can_move;
 	
@@ -62,9 +69,18 @@ func go_down() -> bool:
 	
 	if can_move:
 		position.y += box_movement;
+		Global.box_moved.emit(self)
 	
 	return can_move;
-		
+
+func drown():
+	is_drawning = true
+	crate_morte.visible = true
+	crate.visible = false
+	set_process(false)
+	collision_layer = 0
+	collision_mask = 0
+	top_level = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
