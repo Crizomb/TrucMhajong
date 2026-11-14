@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxid6fcqfx2ri"]
 
-[ext_resource type="Texture2D" uid="uid://dc5q1yremhqup" path="res://entities/menu/level select/recette-galette-complete-agrilait-scaled-1.webp" id="1_3shnc"]
-[ext_resource type="Script" uid="uid://dqfdrmnjo0yq8" path="res://scenes/level_select.gd" id="1_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://dc5q1yremhqup" path="res://entities/menu/level select menu/recette-galette-complete-agrilait-scaled-1.webp" id="1_3shnc"]
+[ext_resource type="Script" uid="uid://dqfdrmnjo0yq8" path="res://entities/menu/level select menu/level_select.gd" id="1_p0wlc"]
 [ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="3_2epne"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htawy"]

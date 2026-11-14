@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MahjongTruc"
-run/main_scene="uid://b7hnubkfb05sj"
+run/main_scene="uid://dqpik7lr0rrc8"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 

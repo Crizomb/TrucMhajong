@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://dqpik7lr0rrc8"]
+
+[ext_resource type="Script" uid="uid://mar0j33h7p3d" path="res://entities/menu/pause menu/pause_menu.gd" id="1_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://csevbnps08evv" path="res://entities/menu/pause menu/pause.png" id="2_5d2l8"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="3_v4r4p"]
+[ext_resource type="Texture2D" uid="uid://bgb3v7bqac153" path="res://entities/menu/main menu/lock.png" id="4_1s2dm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajnlm"]
+texture = ExtResource("2_5d2l8")
+modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqow3"]
+bg_color = Color(0.69054794, 0.2882867, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4l1my"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_bottom = 2
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrk8l"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqow3"]
+texture = ExtResource("4_1s2dm")
+modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
+
+[node name="Pause_menu" type="Control" unique_id=1886887544]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 35.0
+offset_right = -1.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5d2l8")
+
+[node name="Background" type="Panel" parent="." unique_id=1761485505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ajnlm")
+
+[node name="Menu_buttons" type="VBoxContainer" parent="." unique_id=1078474732]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -32.0
+offset_right = 224.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Resume" type="Button" parent="Menu_buttons" unique_id=943224377]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Resume"
+
+[node name="Options" type="Button" parent="Menu_buttons" unique_id=311759874]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Options"
+
+[node name="Level_select" type="Button" parent="Menu_buttons" unique_id=190420544]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Level select"
+
+[node name="Shadow" type="Label" parent="." unique_id=1300965194]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_top = 38.0
+offset_right = 486.0
+offset_bottom = 228.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_v4r4p")
+theme_override_font_sizes/font_size = 138
+text = "Menu Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="." unique_id=103298339]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -483.0
+offset_top = 32.0
+offset_right = 483.0
+offset_bottom = 222.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v4r4p")
+theme_override_font_sizes/font_size = 138
+text = "Menu Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Big_lock" type="Panel" parent="." unique_id=1435502205]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uqow3")
+
+[node name="Small_lock" type="TextureRect" parent="." unique_id=343655593]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 380.0
+offset_right = 347.0
+offset_bottom = 439.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(100, 0)
+texture = ExtResource("4_1s2dm")
+expand_mode = 1
+
+[node name="Small_lock_2" type="TextureRect" parent="." unique_id=365444334]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 380.0
+offset_right = 867.0
+offset_bottom = 439.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-100, 0)
+texture = ExtResource("4_1s2dm")
+expand_mode = 1
+
+[connection signal="button_up" from="Menu_buttons/Resume" to="." method="_on_start_button_up"]
+[connection signal="button_down" from="Menu_buttons/Options" to="." method="_on_options_button_down"]
+[connection signal="button_up" from="Menu_buttons/Options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="Menu_buttons/Level_select" to="." method="_on_level_select_button_up"]
