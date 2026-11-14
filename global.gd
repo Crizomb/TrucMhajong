@@ -22,11 +22,18 @@ func _ready():
 	kill_player.connect(_on_kill_player)
 	player_moved.connect(_on_player_moved)
 	toggle_crouch_player.connect(_on_toggle_crouch_player)
+	init_player_state()
 
 func _on_change_level():
 	current_level += 1
 	print("Le nouveau current_level : ")
 	print(current_level)
+
+func init_player_state():
+	last_direction = Direction.NONE
+	direction_counter = 0
+	movement_counter = 0
+	crouched = false
 
 # Structure de données custom mais globals :
 
@@ -59,11 +66,8 @@ signal kill_player;
 
 func _on_kill_player(reason : DeathReason):
 	print("Le joueur est mort : " + str(reason))
-	last_direction = Direction.NONE
-	direction_counter = 0
-	movement_counter = 0
+	init_player_state()
 	kill_counter += 1
-	crouched = false
 
 # Signal pour le changement de crouch
 signal toggle_crouch_player;
