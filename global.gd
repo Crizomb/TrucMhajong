@@ -32,6 +32,7 @@ func _ready():
 
 func _on_change_level():
 	current_level += 1
+	init_player_state()
 	print("Le nouveau current_level : ")
 	print(current_level)
 	assert(current_level < levels.size(), "Bro there is no next level, pls stop")
