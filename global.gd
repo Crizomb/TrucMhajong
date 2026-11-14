@@ -8,6 +8,7 @@ extends Node
 var current_level : int = 0
 var last_direction : Direction = Direction.NONE
 var direction_counter : int = 0
+var movement_counter : int = 0
 var kill_counter : int = 0
 var crouched : bool = false
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
@@ -39,11 +40,16 @@ enum DeathReason {
 signal player_moved;
 
 func _on_player_moved(direction, position):
+	movement_counter += 1
+	if movement_counter >= 24+1:
+		kill_player.emit(DeathReason.TWENTY_FIVE_MOVEMENTS)
+		return
+	
 	if direction != last_direction:
 		direction_counter = 1
 	else:
 		direction_counter += 1
-		if direction_counter == 4+1:
+		if direction_counter >= 4+1:
 			kill_player.emit(DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION)
 			return
 	last_direction = direction
@@ -55,6 +61,7 @@ func _on_kill_player(reason : DeathReason):
 	print("Le joueur est mort : " + str(reason))
 	last_direction = Direction.NONE
 	direction_counter = 0
+	movement_counter = 0
 	kill_counter += 1
 	crouched = false
 
