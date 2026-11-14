@@ -8,8 +8,9 @@ var CaseDict : Dictionary[Vector2i, CaseColor] = {Vector2i(3, 0) : CaseColor.GRE
 func get_player_case_color(position: Vector2) -> CaseColor:
 	var player_int_pos := local_to_map(position)
 	var atlas_cords := get_cell_atlas_coords(player_int_pos)
-	return CaseDict[atlas_cords]
-
+	if atlas_cords in CaseDict:
+		return CaseDict[atlas_cords]
+	return CaseColor.NULL
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
