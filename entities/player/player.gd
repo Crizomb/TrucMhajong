@@ -37,9 +37,10 @@ func toggle_crouch_if_pressed():
 		chongqing_crepe.visible = !chongqing_crepe.visible
 
 func _process(delta: float) -> void:
-	var direction := get_direction_input()
-	move_direction(direction)
 	toggle_crouch_if_pressed()
+	if !Global.crouched:
+		var direction := get_direction_input()
+		move_direction(direction)
 	if Input.is_action_just_pressed("Restart"):
 		Global.restart_level()
 
