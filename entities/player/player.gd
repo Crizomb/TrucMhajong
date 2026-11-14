@@ -29,34 +29,40 @@ func toggle_crouch_if_pressed():
 func _process(delta: float) -> void:
 	var direction := get_direction_input()
 	move_direction(direction)
-	if direction != Global.Direction.NONE:
-		Global.player_moved.emit(direction, position)
-		sfx_movement.pitch_scale = 1+ log(Global.direction_counter+1)
-		sfx_movement.play()
 	toggle_crouch_if_pressed()
 
 func move_direction(direction: Global.Direction):
+	var moved : bool = false
 	
 	match direction:
 		Global.Direction.RIGHT:
 			var collider : Object = ray_cast_right.get_collider()
 			if !collider or (collider.is_in_group("box") and collider.go_right()):
 				position.x += TileSize
+				moved = true
 		
 		Global.Direction.LEFT:
 			var collider : Object = ray_cast_left.get_collider()
 			if !collider or (collider.is_in_group("box") and collider.go_left()):
 				position.x -= TileSize
+				moved = true
 				
 		Global.Direction.UP:
 			var collider : Object = ray_cast_up.get_collider()
 			if !collider or (collider.is_in_group("box") and collider.go_up()):
 				position.y -= TileSize
+				moved = true
 				
 		Global.Direction.DOWN:
 			var collider : Object = ray_cast_down.get_collider()
 			if !collider or (collider.is_in_group("box") and collider.go_down()):
 				position.y += TileSize
+				moved = true
 		
 		Global.Direction.NONE:
-			pass			
+			pass
+
+	if moved:
+		Global.player_moved.emit(direction, position)
+		sfx_movement.pitch_scale = 1 + log(Global.direction_counter+1)
+		sfx_movement.play()
