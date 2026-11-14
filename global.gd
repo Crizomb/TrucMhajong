@@ -12,6 +12,9 @@ var direction_counter : int = 0
 var movement_counter : int = 0
 var kill_counter : int = 0
 var crouched : bool = false
+
+var already_sent_message : Array[DeathReason] = []; # Stocker les messages déjà envoyés
+
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
 
 # Exemple signal global
@@ -41,12 +44,20 @@ func init_player_state():
 enum Direction {LEFT, RIGHT, UP, DOWN, NONE};
 
 enum DeathReason {
-	UNKNOWN,
 	FIVE_MOVEMENTS_SAME_DIRECTION,
 	TWENTY_FIVE_MOVEMENTS,
 	GREEN_GROUND,
 	FIVE_MOVEMENTS_SAME_COLOR,
-	CREPIERE_BROKEN
+	CREPIERE_BROKEN,
+	UNKNOWN,
+	VOID,
+	
+	NARATION_INTRO_LEVEL_1,
+	NARATION_DEATH_LEVEL_1,
+	NARATION_CREPIERE_LEVEL_2,
+	NARATION_INTRO_LEVEL_4,
+	NARATION_DEATH_LEVEL_4,
+	NARATION_CRATE_BROKEN,
 };
 
 signal player_moved;
