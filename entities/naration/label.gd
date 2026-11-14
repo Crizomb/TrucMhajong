@@ -4,8 +4,12 @@ extends Label
 
 
 @onready var naration_dict : Dictionary[Global.DeathReason, Array] = {
-	Global.DeathReason.UNKNOWN : ["Tu es mort de cause inconnue...", audio_template],
+	Global.DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION : ["Tu es mort de cause inconnue...", audio_template],
 	Global.DeathReason.TWENTY_FIVE_MOVEMENTS : ["Tu bouges trop...", audio_template],
+	Global.DeathReason.GREEN_GROUND : ["Tu es mort de cause inconnue...", audio_template],
+	Global.DeathReason.FIVE_MOVEMENTS_SAME_COLOR : ["Tu es mort de cause inconnue...", audio_template],
+	Global.DeathReason.CREPIERE_BROKEN : ["Tu es mort de cause inconnue...", audio_template],
+	Global.DeathReason.UNKNOWN : ["Tu es mort de cause inconnue...", audio_template],
 }
 
 # Called when the node enters the scene tree for the first time.
