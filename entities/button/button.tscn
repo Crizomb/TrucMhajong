@@ -4,12 +4,24 @@
 [ext_resource type="Script" uid="uid://dgocnxyhkauay" path="res://entities/button/button.gd" id="1_6bgj0"]
 [ext_resource type="Texture2D" uid="uid://g2fdntsfaq3w" path="res://entities/button/button_on.png" id="2_7gf2j"]
 
-[node name="Button" type="Node2D" unique_id=454183045]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
+size = Vector2(201, 216)
+
+[node name="Button" type="Area2D" unique_id=1561398429]
 script = ExtResource("1_6bgj0")
 
 [node name="ButtonOff" type="Sprite2D" parent="." unique_id=266803081]
-visible = false
+scale = Vector2(16, 16)
 texture = ExtResource("1_4tlb3")
 
 [node name="ButtonOn" type="Sprite2D" parent="." unique_id=1626635019]
+visible = false
+scale = Vector2(16, 16)
 texture = ExtResource("2_7gf2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=327800333]
+position = Vector2(-1.5, -3)
+shape = SubResource("RectangleShape2D_k228g")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

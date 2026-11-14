@@ -4,25 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://4cn5k0vmbjsq" path="res://entities/player/character.png" id="1_symyc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
-size = Vector2(16, 16)
+size = Vector2(256, 256)
 
 [node name="Player" type="Area2D" unique_id=1962365068]
 script = ExtResource("1_abrql")
+TileSize = 256
 
 [node name="Character" type="Sprite2D" parent="." unique_id=29876782]
+scale = Vector2(16, 16)
 texture = ExtResource("1_symyc")
 
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=798693242]
-target_position = Vector2(0, 16)
+target_position = Vector2(0, 256)
 
 [node name="RayCastUp" type="RayCast2D" parent="." unique_id=412011709]
-target_position = Vector2(0, -16)
+target_position = Vector2(0, -256)
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=433334395]
-target_position = Vector2(16, 0)
+target_position = Vector2(256, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=666579599]
-target_position = Vector2(-16, 0)
+target_position = Vector2(-256, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396278302]
 shape = SubResource("RectangleShape2D_k228g")
