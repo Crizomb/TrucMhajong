@@ -22,5 +22,4 @@ func _on_options_button_down() -> void:
 	big_lock.visible = true
 
 func _on_level_select_button_up() -> void:
-	print("it no work for pause")
-	get_tree().change_scene_to_file("res://scenes/level_select_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/level_select_menu.tscn")

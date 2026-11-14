@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dbuv1appmvik7"]
+[gd_scene format=4 uid="uid://c085ab2a0gf3x"]
 
 [ext_resource type="PackedScene" uid="uid://bx64p8jsj1aww" path="res://entities/super_label_moche_test/label_moche.tscn" id="1_67pln"]
 [ext_resource type="Script" uid="uid://cjm06b37x108q" path="res://entities/super_label_moche_test/label_moche.gd" id="2_07m7y"]
