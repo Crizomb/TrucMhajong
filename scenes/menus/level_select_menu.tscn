@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cxid6fcqfx2ri"]
 
-[ext_resource type="Texture2D" uid="uid://dc5q1yremhqup" path="res://entities/menu/level select/recette-galette-complete-agrilait-scaled-1.webp" id="1_3shnc"]
-[ext_resource type="Script" uid="uid://dqfdrmnjo0yq8" path="res://scenes/level_select.gd" id="1_p0wlc"]
-[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="3_2epne"]
+[ext_resource type="Script" uid="uid://dqfdrmnjo0yq8" path="res://entities/menu/level select menu/level_select.gd" id="1_tbwtj"]
+[ext_resource type="Texture2D" uid="uid://dc5q1yremhqup" path="res://entities/menu/level select menu/recette-galette-complete-agrilait-scaled-1.webp" id="2_t1nde"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="3_6wgri"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htawy"]
-texture = ExtResource("1_3shnc")
+texture = ExtResource("2_t1nde")
 modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0wlc"]
@@ -108,7 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_p0wlc")
+script = ExtResource("1_tbwtj")
 
 [node name="Background" type="Panel" parent="." unique_id=1842731817]
 layout_mode = 1
@@ -307,7 +307,7 @@ offset_right = 486.0
 offset_bottom = 172.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_2epne")
+theme_override_fonts/font = ExtResource("3_6wgri")
 theme_override_font_sizes/font_size = 105
 text = "Level Select"
 horizontal_alignment = 1
@@ -323,7 +323,7 @@ offset_top = -24.0
 offset_right = 483.0
 offset_bottom = 166.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_2epne")
+theme_override_fonts/font = ExtResource("3_6wgri")
 theme_override_font_sizes/font_size = 105
 text = "Level Select"
 horizontal_alignment = 1

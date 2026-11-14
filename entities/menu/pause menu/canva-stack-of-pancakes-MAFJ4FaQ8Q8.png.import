@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc5q1yremhqup"
-path="res://.godot/imported/recette-galette-complete-agrilait-scaled-1.webp-0f2a429d086624dfbfc997583378cf11.ctex"
+uid="uid://br2xeuic46ne6"
+path="res://.godot/imported/canva-stack-of-pancakes-MAFJ4FaQ8Q8.png-88bd342d5ac5f3afa81cfd7869ad5b0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/menu/level select/recette-galette-complete-agrilait-scaled-1.webp"
-dest_files=["res://.godot/imported/recette-galette-complete-agrilait-scaled-1.webp-0f2a429d086624dfbfc997583378cf11.ctex"]
+source_file="res://entities/menu/pause menu/canva-stack-of-pancakes-MAFJ4FaQ8Q8.png"
+dest_files=["res://.godot/imported/canva-stack-of-pancakes-MAFJ4FaQ8Q8.png-88bd342d5ac5f3afa81cfd7869ad5b0f.ctex"]
 
 [params]
 
