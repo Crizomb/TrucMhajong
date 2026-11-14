@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="4_tpm4h"]
 [ext_resource type="PackedScene" uid="uid://dek227s5ifvkm" path="res://entities/button/button.tscn" id="6_5p1j8"]
 [ext_resource type="PackedScene" uid="uid://b783sv00gae3u" path="res://entities/box/box.tscn" id="7_h11tu"]
+[ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="8_jady6"]
+[ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="9_38th7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sx2h1"]
 texture = ExtResource("3_sx2h1")
@@ -46,9 +48,6 @@ script = ExtResource("4_sx2h1")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 zoom = Vector2(0.5, 0.5)
 
-[node name="Player" parent="." unique_id=1448075389 instance=ExtResource("4_tpm4h")]
-position = Vector2(127, 126)
-
 [node name="Button" parent="." unique_id=454183045 instance=ExtResource("6_5p1j8")]
 position = Vector2(-128, -129)
 
@@ -57,3 +56,14 @@ position = Vector2(384, 128)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("7_h11tu")]
 position = Vector2(640, 128)
+
+[node name="Player" parent="." unique_id=1962365068 instance=ExtResource("4_tpm4h")]
+position = Vector2(125, -133)
+
+[node name="sfx_movement" type="AudioStreamPlayer2D" parent="Player" unique_id=700157877]
+position = Vector2(72, 40)
+stream = ExtResource("8_jady6")
+pitch_scale = 2.5
+
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_38th7")]
+position = Vector2(-132, 627)

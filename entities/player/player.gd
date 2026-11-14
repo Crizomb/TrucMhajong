@@ -1,4 +1,6 @@
 extends Area2D
+class_name Player
+
 @onready var ray_cast_down: RayCast2D = $RayCastDown
 @onready var ray_cast_up: RayCast2D = $RayCastUp
 @onready var ray_cast_right: RayCast2D = $RayCastRight
