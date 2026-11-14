@@ -5,7 +5,7 @@ extends StaticBody2D;
 @onready var RayCastUp : RayCast2D = $RayCastUp;
 @onready var RayCastLeft : RayCast2D = $RayCastLeft;
 
-var box_movement := 256
+var box_movement := 128
 
 
 func go_right() -> bool:

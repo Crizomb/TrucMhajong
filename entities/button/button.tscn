@@ -5,18 +5,18 @@
 [ext_resource type="Texture2D" uid="uid://g2fdntsfaq3w" path="res://entities/button/button_on.png" id="2_7gf2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
-size = Vector2(201, 216)
+size = Vector2(120, 120)
 
 [node name="Button" type="Area2D" unique_id=1561398429]
 script = ExtResource("1_6bgj0")
 
 [node name="ButtonOff" type="Sprite2D" parent="." unique_id=266803081]
-scale = Vector2(16, 16)
+scale = Vector2(8, 8)
 texture = ExtResource("1_4tlb3")
 
 [node name="ButtonOn" type="Sprite2D" parent="." unique_id=1626635019]
 visible = false
-scale = Vector2(16, 16)
+scale = Vector2(8, 8)
 texture = ExtResource("2_7gf2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=327800333]

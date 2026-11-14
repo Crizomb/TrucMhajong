@@ -1,18 +1,17 @@
-[gd_scene format=4 uid="uid://dbuv1appmvik7"]
+[gd_scene format=4 uid="uid://ci0mobncg3tqo"]
 
 [ext_resource type="PackedScene" uid="uid://bx64p8jsj1aww" path="res://entities/super_label_moche_test/label_moche.tscn" id="1_45k4w"]
 [ext_resource type="Script" uid="uid://cjm06b37x108q" path="res://entities/super_label_moche_test/label_moche.gd" id="2_seirh"]
-[ext_resource type="Texture2D" uid="uid://dtpe36josol35" path="res://entities/tilemap/tilemap_caca.png" id="3_sx2h1"]
-[ext_resource type="Script" uid="uid://ch1jgk1ufi4mp" path="res://entities/tilemap/tile_map_logic.gd" id="4_sx2h1"]
 [ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="4_tpm4h"]
 [ext_resource type="PackedScene" uid="uid://dek227s5ifvkm" path="res://entities/button/button.tscn" id="6_5p1j8"]
 [ext_resource type="PackedScene" uid="uid://b783sv00gae3u" path="res://entities/box/box.tscn" id="7_h11tu"]
+[ext_resource type="Texture2D" uid="uid://bg427u1ju1xoc" path="res://entities/tilemap/tilemap.png" id="8_38th7"]
 [ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="8_jady6"]
 [ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="9_38th7"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sx2h1"]
-texture = ExtResource("3_sx2h1")
-texture_region_size = Vector2i(256, 256)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jady6"]
+texture = ExtResource("8_38th7")
+texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -21,17 +20,28 @@ texture_region_size = Vector2i(256, 256)
 5:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 2:1/0 = 0
 3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_tpm4h"]
-tile_size = Vector2i(256, 256)
-sources/0 = SubResource("TileSetAtlasSource_sx2h1")
+[sub_resource type="TileSet" id="TileSet_xkn4h"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jady6")
 
 [node name="Node2D" type="Node2D" unique_id=1947861403]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
+tile_map_data = PackedByteArray("AAD+/wAAAAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAABAAEAAAABAAEAAAAAAAEAAAABAAEAAAD//wEAAAABAAEAAAD+/wEAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAEAAAD+//7/AAADAAAAAAD///7/AAAEAAAAAAD+////AAADAAEAAAD/////AAAEAAEAAAAAAP//AAAFAAAAAAABAP//AAAFAAAAAAACAP//AAAFAAAAAAACAAAAAAAFAAAAAAACAAEAAAAFAAAAAAACAAIAAAAEAAAAAAD9/wIAAAABAAEAAAD+/wIAAAABAAEAAAD//wIAAAABAAEAAAAAAAIAAAABAAEAAAABAAIAAAABAAEAAAD9/wMAAAABAAEAAAD+/wMAAAABAAEAAAD//wMAAAABAAEAAAAAAAMAAAABAAEAAAABAAMAAAABAAEAAAACAAMAAAABAAEAAAADAAMAAAABAAEAAAADAAIAAAABAAEAAAADAAEAAAABAAEAAAADAAAAAAABAAEAAAADAP//AAAFAAAAAAADAP7/AAABAAEAAAACAP7/AAABAAEAAAABAP7/AAABAAEAAAAAAP7/AAABAAEAAAD+//3/AAABAAEAAAD///3/AAABAAEAAAAAAP3/AAABAAEAAAABAP3/AAABAAEAAAACAP3/AAABAAEAAAADAP3/AAABAAEAAAAEAAMAAAABAAEAAAAEAAIAAAABAAEAAAAEAAEAAAABAAEAAAAEAAAAAAABAAEAAAAEAP//AAABAAEAAAAEAP7/AAABAAEAAAAEAP3/AAABAAEAAAA=")
+tile_set = SubResource("TileSet_xkn4h")
 
 [node name="Label" parent="." unique_id=793450889 instance=ExtResource("1_45k4w")]
 offset_left = -262.0
@@ -40,25 +50,18 @@ offset_right = 231.0
 offset_bottom = -108.0
 script = ExtResource("2_seirh")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=268940723]
-tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAABAAAAAAADAAAAAAD//wAAAAADAAAAAAD/////AAADAAAAAAAAAP//AAADAAAAAAABAP//AAADAAAAAAABAAEAAAADAAAAAAAAAAEAAAADAAAAAAD//wEAAAADAAAAAAACAAEAAAAEAAAAAAACAAAAAAAEAAAAAAACAP//AAAEAAAAAAACAP7/AAAEAAAAAAABAP7/AAAEAAAAAAAAAP7/AAAEAAAAAAD///7/AAAEAAAAAAD+//7/AAAEAAAAAAD+////AAAEAAAAAAD+/wAAAAAEAAAAAAD+/wEAAAAEAAAAAAD+/wIAAAAEAAAAAAD//wIAAAAEAAAAAAAAAAIAAAAEAAAAAAABAAIAAAAEAAAAAAACAAIAAAAEAAAAAAACAAMAAAAFAAAAAAADAAMAAAAFAAAAAAADAAIAAAAFAAAAAAADAAEAAAAFAAAAAAADAAAAAAAFAAAAAAAEAAAAAAADAAEAAAAEAAEAAAADAAEAAAAEAAIAAAADAAEAAAA=")
-tile_set = SubResource("TileSet_tpm4h")
-script = ExtResource("4_sx2h1")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 zoom = Vector2(0.5, 0.5)
 
 [node name="Button" parent="." unique_id=454183045 instance=ExtResource("6_5p1j8")]
-position = Vector2(-128, -129)
-
-[node name="Box" parent="." unique_id=1024020810 instance=ExtResource("7_h11tu")]
-position = Vector2(384, 128)
+position = Vector2(-62, -192)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("7_h11tu")]
-position = Vector2(640, 128)
+position = Vector2(191, -66)
 
 [node name="Player" parent="." unique_id=1962365068 instance=ExtResource("4_tpm4h")]
-position = Vector2(125, -133)
+position = Vector2(-191, -65)
+TileSize = 128
 
 [node name="sfx_movement" type="AudioStreamPlayer2D" parent="Player" unique_id=700157877]
 position = Vector2(72, 40)
@@ -66,4 +69,4 @@ stream = ExtResource("8_jady6")
 pitch_scale = 2.5
 
 [node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_38th7")]
-position = Vector2(-132, 627)
+position = Vector2(319, 313)

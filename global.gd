@@ -74,6 +74,7 @@ func _on_kill_player(reason : DeathReason):
 	naration_label.emit(reason)
 	init_player_state()
 	kill_counter += 1
+	restart_level()
 
 # Signal pour le changement de crouch
 signal toggle_crouch_player;
@@ -81,3 +82,6 @@ signal toggle_crouch_player;
 func _on_toggle_crouch_player():
 	crouched = !crouched
 	print("Crouch état : " + str(crouched))
+
+func restart_level():
+	get_tree().reload_current_scene()

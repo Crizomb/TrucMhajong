@@ -1,12 +1,17 @@
 extends Area2D
 class_name Player
 
+@onready var chongqing: Sprite2D = $Chongqing
+@onready var chongqing_crepe: Sprite2D = $Chongqing_crepe
+
 @onready var ray_cast_down: RayCast2D = $RayCastDown
 @onready var ray_cast_up: RayCast2D = $RayCastUp
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
-@export var TileSize := 16
+@export var TileSize := 128
 @onready var sfx_movement: AudioStreamPlayer2D = $sfx_movement
+
+var is_crepe := false
 
 func get_direction_input() -> Global.Direction:
 	var direction : Global.Direction;
@@ -27,11 +32,16 @@ func get_direction_input() -> Global.Direction:
 func toggle_crouch_if_pressed():
 	if Input.is_action_just_pressed("ToggleCrouch"):
 		Global.toggle_crouch_player.emit()
+		is_crepe = !is_crepe
+		chongqing.visible = !chongqing.visible
+		chongqing_crepe.visible = !chongqing_crepe.visible
 
 func _process(delta: float) -> void:
 	var direction := get_direction_input()
 	move_direction(direction)
 	toggle_crouch_if_pressed()
+	if Input.is_action_just_pressed("Restart"):
+		Global.restart_level()
 
 func move_direction(direction: Global.Direction):
 	var moved : bool = false

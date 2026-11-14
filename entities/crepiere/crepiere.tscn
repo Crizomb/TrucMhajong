@@ -8,8 +8,8 @@ colors = PackedColorArray(0.6444288, 0, 0.00899968, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_k228g"]
 gradient = SubResource("Gradient_x7t00")
-width = 256
-height = 256
+width = 128
+height = 128
 fill = 1
 fill_from = Vector2(0.48699585, 0.45683092)
 
@@ -17,6 +17,7 @@ fill_from = Vector2(0.48699585, 0.45683092)
 size = Vector2(236, 232)
 
 [node name="Crepiere" type="Area2D" unique_id=949437595]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_erkw8")
 
 [node name="CrepeOff" type="TextureRect" parent="." unique_id=492153543]

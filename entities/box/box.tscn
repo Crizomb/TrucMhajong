@@ -4,13 +4,13 @@
 [ext_resource type="Script" uid="uid://2ix4o7i0qoic" path="res://entities/box/box.gd" id="1_pihpk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
-size = Vector2(239, 241)
+size = Vector2(115, 115)
 
 [node name="Box" type="StaticBody2D" unique_id=1024020810 groups=["box"]]
 script = ExtResource("1_pihpk")
 
 [node name="Box" type="Sprite2D" parent="." unique_id=448560493]
-scale = Vector2(16, 16)
+scale = Vector2(8, 8)
 texture = ExtResource("1_josro")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=487859305]
@@ -18,13 +18,13 @@ position = Vector2(-2.5, -1.5)
 shape = SubResource("RectangleShape2D_k228g")
 
 [node name="RayCastDown" type="RayCast2D" parent="." unique_id=52629798]
-target_position = Vector2(0, 256)
+target_position = Vector2(0, 128)
 
 [node name="RayCastUp" type="RayCast2D" parent="." unique_id=1157471255]
-target_position = Vector2(0, -256)
+target_position = Vector2(0, -128)
 
 [node name="RayCastRight" type="RayCast2D" parent="." unique_id=977917730]
-target_position = Vector2(256, 0)
+target_position = Vector2(128, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="." unique_id=664268595]
-target_position = Vector2(-256, 0)
+target_position = Vector2(-128, 0)
