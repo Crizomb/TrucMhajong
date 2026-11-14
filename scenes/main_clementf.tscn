@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b7hnubkfb05sj"]
 
-[ext_resource type="Texture2D" uid="uid://cm5ojjba2ppct" path="res://scenes/crepes header.jpg.webp" id="1_nrk8l"]
-[ext_resource type="Script" uid="uid://pad2bf8l6l21" path="res://scenes/main_clementf.gd" id="1_ojs61"]
-[ext_resource type="Texture2D" uid="uid://bgb3v7bqac153" path="res://scenes/115681.png" id="2_4l1my"]
-[ext_resource type="Script" uid="uid://ceeetta8gy20l" path="res://scenes/lock.gd" id="4_qj4sv"]
-[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://scenes/Honey Crepes.ttf" id="5_kjbsp"]
+[ext_resource type="Texture2D" uid="uid://cm5ojjba2ppct" path="res://entities/menu/main menu/crepes header.jpg.webp" id="1_nrk8l"]
+[ext_resource type="Script" uid="uid://pad2bf8l6l21" path="res://entities/menu/main menu/main_clementf.gd" id="1_ojs61"]
+[ext_resource type="Texture2D" uid="uid://bgb3v7bqac153" path="res://entities/menu/main menu/lock.png" id="2_4l1my"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="5_kjbsp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajnlm"]
 texture = ExtResource("1_nrk8l")
@@ -63,6 +62,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ajnlm")
@@ -119,7 +120,6 @@ anchor_bottom = 0.6759259
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uqow3")
-script = ExtResource("4_qj4sv")
 metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="." unique_id=103298339]
@@ -144,15 +144,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -187.0
-offset_top = 1.0
-offset_right = 185.0
-offset_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uqow3")
-script = ExtResource("4_qj4sv")
 
 [connection signal="pressed" from="Menu_buttons/Start_button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Menu_buttons/Options_button" to="Small_lock" method="_on_options_button_pressed"]
+[connection signal="button_down" from="Menu_buttons/Options_button" to="." method="_on_options_button_down"]
+[connection signal="button_up" from="Menu_buttons/Options_button" to="." method="_on_options_button_up"]
 [connection signal="pressed" from="Menu_buttons/Exit_button" to="." method="_on_exit_pressed"]

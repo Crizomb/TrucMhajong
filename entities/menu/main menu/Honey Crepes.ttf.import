@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://byhousucx5uiv"
-path="res://.godot/imported/Honey Crepes.ttf-021db797f5b71395d00192de4a645343.fontdata"
+path="res://.godot/imported/Honey Crepes.ttf-c52abc1fb301220c4facc868e65aa846.fontdata"
 
 [deps]
 
-source_file="res://scenes/Honey Crepes.ttf"
-dest_files=["res://.godot/imported/Honey Crepes.ttf-021db797f5b71395d00192de4a645343.fontdata"]
+source_file="res://entities/menu/main menu/Honey Crepes.ttf"
+dest_files=["res://.godot/imported/Honey Crepes.ttf-c52abc1fb301220c4facc868e65aa846.fontdata"]
 
 [params]
 

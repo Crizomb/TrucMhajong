@@ -1,7 +1,5 @@
-extends Panel
+extends Node2D
 
-@onready var small_lock: Panel = $"."
-@onready var big_lock: Panel = $"../Big_lock"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
