@@ -1,0 +1,360 @@
+[gd_scene format=3 uid="uid://cxid6fcqfx2ri"]
+
+[ext_resource type="Texture2D" uid="uid://dc5q1yremhqup" path="res://entities/menu/level select/recette-galette-complete-agrilait-scaled-1.webp" id="1_3shnc"]
+[ext_resource type="Script" uid="uid://dqfdrmnjo0yq8" path="res://scenes/level_select.gd" id="1_p0wlc"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="3_2epne"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htawy"]
+texture = ExtResource("1_3shnc")
+modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0wlc"]
+bg_color = Color(0.69054794, 0.2882867, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2epne"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_bottom = 2
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rif6e"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chg43"]
+bg_color = Color(0.6901961, 0.14509805, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r77uv"]
+bg_color = Color(0.444898, 0.07923142, 1.6845763e-07, 1)
+border_width_bottom = 2
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nqmc"]
+bg_color = Color(0.444898, 0.07923142, 1.6845763e-07, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7plkq"]
+bg_color = Color(0.69054794, 0.2882867, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckc44"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_bottom = 2
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2xx4"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="LevelSelect" type="Control" unique_id=1931381628]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p0wlc")
+
+[node name="Background" type="Panel" parent="." unique_id=1842731817]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_htawy")
+
+[node name="SetContainer" type="VBoxContainer" parent="." unique_id=688714420]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -465.5
+offset_top = 187.0
+offset_right = 465.5
+offset_bottom = 583.0
+grow_horizontal = 2
+theme_override_constants/separation = 41
+
+[node name="Set_1" type="HBoxContainer" parent="SetContainer" unique_id=2038989611]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 55
+
+[node name="Level_1" type="Button" parent="SetContainer/Set_1" unique_id=838613806]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "1"
+
+[node name="Level_2" type="Button" parent="SetContainer/Set_1" unique_id=1377991866]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "2"
+
+[node name="Level_3" type="Button" parent="SetContainer/Set_1" unique_id=1383881559]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "3"
+
+[node name="Level_4" type="Button" parent="SetContainer/Set_1" unique_id=2016979159]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "4"
+
+[node name="Level_10" type="Button" parent="SetContainer/Set_1" unique_id=816430999]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "10"
+
+[node name="Set_2" type="HBoxContainer" parent="SetContainer" unique_id=1415469639]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 55
+
+[node name="Level_11" type="Button" parent="SetContainer/Set_2" unique_id=1377897806]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "11"
+
+[node name="Level_12" type="Button" parent="SetContainer/Set_2" unique_id=1935884279]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "12"
+
+[node name="Level_13" type="Button" parent="SetContainer/Set_2" unique_id=1092061480]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "13"
+
+[node name="Level_14" type="Button" parent="SetContainer/Set_2" unique_id=761787467]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "14"
+
+[node name="Level_20" type="Button" parent="SetContainer/Set_2" unique_id=1563891563]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "20"
+
+[node name="Set_3" type="HBoxContainer" parent="SetContainer" unique_id=289540769]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 55
+
+[node name="Level_21" type="Button" parent="SetContainer/Set_3" unique_id=1050646590]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "21"
+
+[node name="Level_22" type="Button" parent="SetContainer/Set_3" unique_id=400719290]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "22"
+
+[node name="Level_23" type="Button" parent="SetContainer/Set_3" unique_id=1987103592]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0wlc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2epne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rif6e")
+text = "23"
+
+[node name="Level_24" type="Button" parent="SetContainer/Set_3" unique_id=1925041399]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "24"
+
+[node name="Level_30" type="Button" parent="SetContainer/Set_3" unique_id=560634852]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_chg43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r77uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4nqmc")
+text = "30"
+
+[node name="Title2" type="Label" parent="." unique_id=1644052153]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_top = -18.0
+offset_right = 486.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2epne")
+theme_override_font_sizes/font_size = 105
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="." unique_id=141481544]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -483.0
+offset_top = -24.0
+offset_right = 483.0
+offset_bottom = 166.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_2epne")
+theme_override_font_sizes/font_size = 105
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="." unique_id=5091932]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 24.0
+offset_right = 213.0
+offset_bottom = 100.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_7plkq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ckc44")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2xx4")
+text = "Back"
+
+[connection signal="button_up" from="SetContainer/Set_1/Level_1" to="." method="_on_level_1_button_up"]
+[connection signal="button_up" from="SetContainer/Set_1/Level_2" to="." method="_on_level_2_button_up"]
+[connection signal="button_up" from="SetContainer/Set_1/Level_3" to="." method="_on_level_3_button_up"]
+[connection signal="button_up" from="SetContainer/Set_1/Level_4" to="." method="_on_level_4_button_up"]
+[connection signal="button_up" from="SetContainer/Set_1/Level_10" to="." method="_on_level_10_button_up"]
+[connection signal="button_up" from="SetContainer/Set_2/Level_11" to="." method="_on_level_11_button_up"]
+[connection signal="button_up" from="SetContainer/Set_2/Level_12" to="." method="_on_level_12_button_up"]
+[connection signal="button_up" from="SetContainer/Set_2/Level_13" to="." method="_on_level_13_button_up"]
+[connection signal="button_up" from="SetContainer/Set_2/Level_14" to="." method="_on_level_14_button_up"]
+[connection signal="button_up" from="SetContainer/Set_2/Level_20" to="." method="_on_level_20_button_up"]
+[connection signal="button_up" from="SetContainer/Set_3/Level_21" to="." method="_on_level_21_button_up"]
+[connection signal="button_up" from="SetContainer/Set_3/Level_22" to="." method="_on_level_22_button_up"]
+[connection signal="button_up" from="SetContainer/Set_3/Level_23" to="." method="_on_level_23_button_up"]
+[connection signal="button_up" from="SetContainer/Set_3/Level_24" to="." method="_on_level_24_button_up"]
+[connection signal="button_up" from="SetContainer/Set_3/Level_30" to="." method="_on_level_30_button_up"]
+[connection signal="button_up" from="Back" to="." method="_on_back_button_up"]
