@@ -4,6 +4,7 @@ extends Area2D
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @export var TileSize := 16
+@onready var sfx_movement: AudioStreamPlayer2D = $sfx_movement
 
 func get_direction_input() -> Global.Direction:
 	var direction : Global.Direction;
@@ -30,6 +31,8 @@ func _process(delta: float) -> void:
 	move_direction(direction)
 	if direction != Global.Direction.NONE:
 		Global.player_moved.emit(direction, position)
+		sfx_movement.pitch_scale = 1+ log(Global.direction_counter+1)
+		sfx_movement.play()
 	toggle_crouch_if_pressed()
 
 func move_direction(direction: Global.Direction):
