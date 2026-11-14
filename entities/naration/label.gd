@@ -24,12 +24,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func show_text(s: String, time: float):
+	text = s
+	visible = true
+	await get_tree().create_timer(time).timeout
+	visible = false
+
 func _on_naration_label(t : Global.DeathReason):
 	var metadata = naration_dict.get(t, naration_dict[Global.DeathReason.UNKNOWN])
-	text = metadata[0]
-	print(metadata)
 	var audio = metadata[1]
 	if audio:
 		audio.play()
 	else:
-		print("No audio for this death")
+		("No audio for this death")
+	show_text(metadata[0], 3)
