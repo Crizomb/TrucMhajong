@@ -31,6 +31,11 @@ func _on_change_level():
 
 enum Direction {LEFT, RIGHT, UP, DOWN, NONE};
 
+enum DeathReason {
+	FIVE_MOVEMENTS_SAME_DIRECTION,
+	TWENTY_FIVE_MOVEMENTS
+};
+
 signal player_moved;
 
 func _on_player_moved(direction):
@@ -38,16 +43,16 @@ func _on_player_moved(direction):
 		direction_counter = 1
 	else:
 		direction_counter += 1
-		if direction_counter == 5:
-			kill_player.emit()
+		if direction_counter == 4+1:
+			kill_player.emit(DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION)
 			return
 	last_direction = direction
 
 # Signal pour tuer le joueur
 signal kill_player;
 
-func _on_kill_player():
-	print("Le joueur est mort")
+func _on_kill_player(reason : DeathReason):
+	print("Le joueur est mort : " + str(reason))
 	last_direction = Direction.NONE
 	direction_counter = 0
 	kill_counter += 1
