@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dek227s5ifvkm"]
+
+[ext_resource type="Texture2D" uid="uid://c54lkh6c2mbh6" path="res://entities/button/button_off.png" id="1_4tlb3"]
+[ext_resource type="Script" uid="uid://dgocnxyhkauay" path="res://entities/button/button.gd" id="1_6bgj0"]
+[ext_resource type="Texture2D" uid="uid://g2fdntsfaq3w" path="res://entities/button/button_on.png" id="2_7gf2j"]
+
+[node name="Button" type="Node2D" unique_id=454183045]
+script = ExtResource("1_6bgj0")
+
+[node name="ButtonOff" type="Sprite2D" parent="." unique_id=266803081]
+visible = false
+texture = ExtResource("1_4tlb3")
+
+[node name="ButtonOn" type="Sprite2D" parent="." unique_id=1626635019]
+texture = ExtResource("2_7gf2j")
