@@ -66,5 +66,5 @@ func move_direction(direction: Global.Direction):
 
 	if moved:
 		Global.player_moved.emit(direction, position)
-		sfx_movement.pitch_scale = 1 + log(Global.direction_counter+1)
+		sfx_movement.pitch_scale = 1 + log(max(Global.direction_counter+1, 1))
 		sfx_movement.play()
