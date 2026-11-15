@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bg427u1ju1xoc" path="res://entities/tilemap/tilemap.png" id="1_gvg1j"]
 [ext_resource type="Script" uid="uid://ch1jgk1ufi4mp" path="res://entities/tilemap/tile_map_logic.gd" id="2_58t8e"]
 [ext_resource type="PackedScene" uid="uid://bs3y5vqdmrhbg" path="res://scenes/GUI.tscn" id="6_y0uvs"]
+[ext_resource type="PackedScene" uid="uid://d26p84m4rgbo" path="res://entities/post-process/point_light_2d.tscn" id="7_4pwmy"]
 [ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="7_5juys"]
 [ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="8_taqyl"]
 [ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="9_ciu0c"]
@@ -59,3 +60,6 @@ stream = ExtResource("8_taqyl")
 pitch_scale = 2.5
 
 [node name="CanvasLayer" parent="." unique_id=1832535853 instance=ExtResource("6_y0uvs")]
+
+[node name="PointLight2D" parent="." unique_id=1065185849 instance=ExtResource("7_4pwmy")]
+position = Vector2(190, 41)

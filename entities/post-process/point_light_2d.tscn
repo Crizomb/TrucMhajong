@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d26p84m4rgbo"]
+
+[ext_resource type="Texture2D" uid="uid://dve5ljufprjvs" path="res://entities/post-process/new_noise_texture_2d.tres" id="1_8ihnj"]
+
+[node name="PointLight2D" type="PointLight2D" unique_id=1065185849]
+color = Color(0.85490197, 1, 1, 1)
+texture = ExtResource("1_8ihnj")
