@@ -1,28 +1,8 @@
 [gd_scene format=3 uid="uid://cigdu36w2nwwv"]
 
 [ext_resource type="Script" uid="uid://dqylixwu81fxk" path="res://entities/crepiere/crepiere.gd" id="1_erkw8"]
-
-[sub_resource type="Gradient" id="Gradient_erkw8"]
-offsets = PackedFloat32Array(0, 0.67416686)
-colors = PackedColorArray(0.017985078, 0.13451582, 0.3108947, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4658o"]
-gradient = SubResource("Gradient_erkw8")
-width = 128
-height = 128
-fill = 1
-fill_from = Vector2(0.48699585, 0.45683092)
-
-[sub_resource type="Gradient" id="Gradient_x7t00"]
-offsets = PackedFloat32Array(0, 0.67416686)
-colors = PackedColorArray(0.8370949, 0, 0.24472982, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_k228g"]
-gradient = SubResource("Gradient_x7t00")
-width = 128
-height = 128
-fill = 1
-fill_from = Vector2(0.48699585, 0.45683092)
+[ext_resource type="Texture2D" uid="uid://bxrd4fkwn2x8q" path="res://entities/crepiere/bilig_off.png" id="2_0cxb7"]
+[ext_resource type="Texture2D" uid="uid://dhjcxs6j5ic68" path="res://entities/crepiere/bilig_on.png" id="3_hxpb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erkw8"]
 size = Vector2(236, 232)
@@ -31,24 +11,18 @@ size = Vector2(236, 232)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_erkw8")
 
-[node name="CrepeOff" type="TextureRect" parent="." unique_id=492153543]
-offset_left = -125.0
-offset_top = -117.0
-offset_right = 131.0
-offset_bottom = 139.0
-texture = SubResource("GradientTexture2D_4658o")
-
-[node name="CrepeOn" type="TextureRect" parent="." unique_id=11875234]
-visible = false
-offset_left = -125.0
-offset_top = -117.0
-offset_right = 131.0
-offset_bottom = 139.0
-texture = SubResource("GradientTexture2D_k228g")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074507585]
 position = Vector2(3, 7)
 shape = SubResource("RectangleShape2D_erkw8")
+
+[node name="BiligOff" type="Sprite2D" parent="." unique_id=1815934945]
+position = Vector2(0, 10)
+texture = ExtResource("2_0cxb7")
+
+[node name="BiligOn" type="Sprite2D" parent="." unique_id=1774214347]
+visible = false
+position = Vector2(0, 10)
+texture = ExtResource("3_hxpb8")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
