@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm5ojjba2ppct"
-path="res://.godot/imported/crepes header.jpg.webp-04e4267c8611fb5bf86b2ea4a212b0d2.ctex"
+uid="uid://bov7r33vcie0"
+path="res://.godot/imported/menu.png-86bb243f4c9807af372d923a326c3d94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/menu/main menu/crepes header.jpg.webp"
-dest_files=["res://.godot/imported/crepes header.jpg.webp-04e4267c8611fb5bf86b2ea4a212b0d2.ctex"]
+source_file="res://entities/menu/menu.png"
+dest_files=["res://.godot/imported/menu.png-86bb243f4c9807af372d923a326c3d94.ctex"]
 
 [params]
 

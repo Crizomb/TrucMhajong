@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b7hnubkfb05sj"]
 
 [ext_resource type="Script" uid="uid://pad2bf8l6l21" path="res://entities/menu/main menu/main_menu.gd" id="1_wu84c"]
-[ext_resource type="Texture2D" uid="uid://cm5ojjba2ppct" path="res://entities/menu/main menu/crepes header.jpg.webp" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://bov7r33vcie0" path="res://entities/menu/menu.png" id="2_6bivr"]
 [ext_resource type="Texture2D" uid="uid://bgb3v7bqac153" path="res://entities/menu/main menu/lock.png" id="3_rtw2f"]
 [ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="4_oa1go"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajnlm"]
-texture = ExtResource("2_8ln24")
+texture = ExtResource("2_6bivr")
 modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqow3"]
