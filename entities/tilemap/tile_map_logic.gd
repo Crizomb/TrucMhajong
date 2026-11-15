@@ -25,16 +25,21 @@ func _process(delta: float) -> void:
 
 var current_color : CaseColor = CaseColor.NULL
 var count_color := 0
-func _on_player_moved(_direction, player_position):
-	var player_int_pos := local_to_map(player_position);
+func _on_player_moved(_direction, global_player_position):
+	
+	var player_int_pos := local_to_map(to_local(global_player_position))
 	var color := get_case_color(player_int_pos)
+	print("color")
+	print(color)
 	if color == CaseColor.GREEN:
 		Global.kill_player.emit(Global.DeathReason.GREEN_GROUND)
 		
+	print(count_color)
 	if color == current_color:
 		count_color += 1;
 	else:
 		count_color = 1;
+
 	current_color = color
 
 	if count_color >= 4+1:
