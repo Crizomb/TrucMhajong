@@ -44,6 +44,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Restart"):
 		Global.restart_level()
 		Global.init_player_state()
+	
+	if Input.is_action_just_pressed("RespectToAdam"):
+		start_respect_to_adam()
 
 func move_direction(direction: Global.Direction):
 	var moved : bool = false
@@ -80,3 +83,17 @@ func move_direction(direction: Global.Direction):
 		Global.player_moved.emit(direction, global_position)
 		sfx_movement.pitch_scale = 1 + log(max(Global.direction_counter+1, 1))
 		sfx_movement.play()
+		
+# RESPECT TO ADAM
+@onready var respect_to_adam: Sprite2D = $RespectToAdam
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $RespectToAdam/AudioStreamPlayer2D
+
+@onready var timer: Timer = $RespectToAdam/Timer
+
+func start_respect_to_adam():
+	respect_to_adam.visible = true
+	audio_stream_player_2d.play()
+	timer.start()
+
+func _on_timer_timeout() -> void:
+	respect_to_adam.visible = false

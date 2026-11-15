@@ -3,9 +3,16 @@
 [ext_resource type="Script" uid="uid://itycuqlsqq0y" path="res://entities/player/player.gd" id="1_abrql"]
 [ext_resource type="Texture2D" uid="uid://cnob3cy3gwje6" path="res://entities/player/chongqing_crepe.png" id="3_bls4j"]
 [ext_resource type="Texture2D" uid="uid://cw6c2w47md6qi" path="res://entities/player/chongqing.png" id="3_sglur"]
+[ext_resource type="Texture2D" uid="uid://c76v63efw5mlt" path="res://entities/player/respect_to_adam.png" id="4_bls4j"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="5_fkugw"]
+[ext_resource type="AudioStream" uid="uid://caa07ps41y6vf" path="res://entities/player/dragon-studio-thud-sound-effect-405470.mp3" id="6_8fjmc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
 size = Vector2(115, 115)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bls4j"]
+font = ExtResource("5_fkugw")
+font_size = 96
 
 [node name="Player" type="Area2D" unique_id=1995154415]
 script = ExtResource("1_abrql")
@@ -36,3 +43,25 @@ visible = false
 position = Vector2(0, 10.999999)
 scale = Vector2(0.28190103, 0.29427084)
 texture = ExtResource("3_bls4j")
+
+[node name="RespectToAdam" type="Sprite2D" parent="." unique_id=148768074]
+visible = false
+top_level = true
+position = Vector2(1, -18)
+texture = ExtResource("4_bls4j")
+
+[node name="Label" type="Label" parent="RespectToAdam" unique_id=904772408]
+offset_left = -294.0
+offset_top = -286.0
+offset_right = 613.0
+offset_bottom = -111.0
+theme_override_font_sizes/font_size = 128
+text = "RESPECT TO ADAM"
+label_settings = SubResource("LabelSettings_bls4j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="RespectToAdam" unique_id=1293729059]
+stream = ExtResource("6_8fjmc")
+
+[node name="Timer" type="Timer" parent="RespectToAdam" unique_id=1761711231]
+
+[connection signal="timeout" from="RespectToAdam/Timer" to="." method="_on_timer_timeout"]

@@ -36,6 +36,7 @@ func try_message(r : DeathReason, m : int):
 	reasons_counters[r] += 1
 
 func _on_change_level():
+	await get_tree().create_timer(1.0).timeout
 	current_level += 1
 	init_player_state()
 	print("Le nouveau current_level : " + str(current_level))
@@ -142,7 +143,7 @@ func _on_toggle_crouch_player():
 		test_crepiere.emit()
 
 func restart_level():
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene.call_deferred()
 	
 # Gestion des niveaux
 var levels = [
