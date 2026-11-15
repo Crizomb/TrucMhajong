@@ -3,7 +3,6 @@ extends Node
 # Ici on mets des trucs globaux.
 # Accessible via : Globals.
 
-
 signal box_moved(box: Box);
 signal naration_label;
 signal test_crepiere;
@@ -144,7 +143,7 @@ func _on_toggle_crouch_player():
 
 func restart_level():
 	get_tree().reload_current_scene.call_deferred()
-	
+
 # Gestion des niveaux
 var levels = [
 	"res://scenes/Niveaux/niveau1.tscn",

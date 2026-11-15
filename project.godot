@@ -18,8 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://di2h1hd30mcdx"
-Naration="*uid://bef70jq2kewgg"
-PauseMenu="*uid://cssw0ur576jgh"
 
 [display]
 
