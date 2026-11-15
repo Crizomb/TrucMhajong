@@ -34,6 +34,16 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 text = ":"
 
+[node name="Restart prompt" type="Label" parent="." unique_id=1187603184]
+offset_left = 821.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 37
+text = "Press R to Restart"
+
 [node name="Deaths icon" type="Panel" parent="." unique_id=1163723645]
 offset_left = 20.0
 offset_top = 93.0
