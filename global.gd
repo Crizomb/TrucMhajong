@@ -15,8 +15,7 @@ var movement_counter : int = 0
 var kill_counter : int = 0
 var crouched : bool = false
 
-var already_sent_message : Array[DeathReason] = []; # Stocker les messages déjà envoyés
-
+var reasons_counters : Array[int] = []; # Stocker les messages déjà envoyés
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
 
 # Exemple signal global
@@ -24,18 +23,43 @@ var already_sent_message : Array[DeathReason] = []; # Stocker les messages déj�
 signal change_level;
 
 func _ready():
+	reset_message_counters()
 	change_level.connect(_on_change_level)
 	kill_player.connect(_on_kill_player)
 	player_moved.connect(_on_player_moved)
 	toggle_crouch_player.connect(_on_toggle_crouch_player)
 	init_player_state()
 
+func try_message(r : DeathReason, m : int):
+	if reasons_counters[r] % m == 0:
+		naration_label.emit(r)
+	reasons_counters[r] += 1
+
 func _on_change_level():
 	current_level += 1
 	init_player_state()
-	print("Le nouveau current_level : ")
-	print(current_level)
+	print("Le nouveau current_level : " + str(current_level))
 	assert(current_level < levels.size(), "Bro there is no next level, pls stop")
+	
+	# envoyer un message d'intro (c'est dégueulasse je sais)
+	match current_level:
+		0: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_1, 610/2) # Très haut modulo pour ne le faire qu'une fois
+		1: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_2, 610/2)
+		2: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_3, 610/2)
+		3: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_4, 610/2)
+		4: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_10, 610/2)
+		10: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_11, 610/2)
+		11: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_12, 610/2)
+		12: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_13, 610/2)
+		13: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_14, 610/2)
+		14: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_20, 610/2)
+		20: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_21, 610/2)
+		21: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_22, 610/2)
+		22: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_23, 610/2)
+		23: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_24, 610/2)
+		24: try_message(Global.DeathReason.NARATION_INTRO_LEVEL_30, 610/2)
+		_: pass
+	
 	get_tree().change_scene_to_file(levels[current_level]);
 
 func init_player_state():
@@ -43,6 +67,10 @@ func init_player_state():
 	direction_counter = 0
 	movement_counter = 0
 	crouched = false
+
+func reset_message_counters():
+	reasons_counters.resize(DeathReason.size());
+	reasons_counters.fill(0);
 
 # Structure de données custom mais globals :
 
@@ -57,12 +85,24 @@ enum DeathReason {
 	UNKNOWN,
 	CROUCH_CREPIERE_OFF,
 	
+	FIVE_DEATHS_LEVEL_1,
+	OPTIONS_MENU,
 	NARATION_INTRO_LEVEL_1,
-	NARATION_DEATH_LEVEL_1,
-	NARATION_CREPIERE_LEVEL_2,
+	NARATION_INTRO_LEVEL_2,
+	NARATION_INTRO_LEVEL_3,
 	NARATION_INTRO_LEVEL_4,
-	NARATION_DEATH_LEVEL_4,
-	NARATION_CRATE_BROKEN,
+	NARATION_INTRO_LEVEL_10,
+	NARATION_INTRO_LEVEL_11,
+	NARATION_INTRO_LEVEL_12,
+	NARATION_INTRO_LEVEL_13,
+	NARATION_INTRO_LEVEL_14,
+	NARATION_INTRO_LEVEL_20,
+	NARATION_INTRO_LEVEL_21,
+	NARATION_INTRO_LEVEL_22,
+	NARATION_INTRO_LEVEL_23,
+	NARATION_INTRO_LEVEL_24,
+	NARATION_INTRO_LEVEL_30,
+	NARATION_END_LEVEL_30,
 };
 
 signal player_moved;
@@ -87,7 +127,7 @@ signal kill_player;
 
 func _on_kill_player(reason : DeathReason):
 	print("Le joueur est mort : " + str(reason))
-	naration_label.emit(reason)
+	try_message(reason, 5) # envoyer le message de mort toutes les 5 morts
 	init_player_state()
 	kill_counter += 1
 	restart_level()
