@@ -54,9 +54,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("label is ready")
-	button.text = "non vide"
 	button.visible = false
+	if Global.s != "":
+		await get_tree().create_timer(0.1).timeout
+		show_text(Global.s, Global.time)
+	Global.s = ""
 	Global.naration_label.connect(_on_naration_label)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -73,9 +75,11 @@ func show_text(s: String, time: float):
 
 func _on_naration_label(t : Global.DeathReason):
 	var metadata = naration_dict.get(t, naration_dict[Global.DeathReason.UNKNOWN])
+	Global.s = metadata[0]
+	Global.time = 3
 	var audio = metadata[1]
 	if audio:
 		audio.play()
 	else:
 		print("No audio for this death")
-	show_text(metadata[0], 3)
+	
