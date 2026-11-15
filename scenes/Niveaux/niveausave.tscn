@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://org7457528cb"]
+[gd_scene format=4 uid="uid://dgailcjqjex76"]
 
 [ext_resource type="Texture2D" uid="uid://bg427u1ju1xoc" path="res://entities/tilemap/tilemap.png" id="1_imayw"]
 [ext_resource type="Script" uid="uid://ch1jgk1ufi4mp" path="res://entities/tilemap/tile_map_logic.gd" id="2_f7ksi"]
