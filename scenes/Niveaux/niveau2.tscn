@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="8_hmfxb"]
 [ext_resource type="PackedScene" uid="uid://bs3y5vqdmrhbg" path="res://scenes/GUI.tscn" id="8_sjwj2"]
 [ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="9_fq7xr"]
+[ext_resource type="PackedScene" uid="uid://d26p84m4rgbo" path="res://entities/post-process/point_light_2d.tscn" id="9_pqxxr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jady6"]
 texture = ExtResource("1_jyd2s")
@@ -66,3 +67,6 @@ stream = ExtResource("8_hmfxb")
 pitch_scale = 2.5
 
 [node name="CanvasLayer" parent="." unique_id=1832535853 instance=ExtResource("8_sjwj2")]
+
+[node name="PointLight2D" parent="." unique_id=1065185849 instance=ExtResource("9_pqxxr")]
+position = Vector2(190, 41)
