@@ -48,7 +48,7 @@ position = Vector2(63, -189)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(64, 66)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.65, 0.65)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("4_shd76")]
 position = Vector2(63, 60)

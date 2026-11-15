@@ -43,7 +43,7 @@ script = ExtResource("2_wyplt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(140, 73)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.6, 0.6)
 
 [node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_gv631")]
 position = Vector2(-324, -320)
