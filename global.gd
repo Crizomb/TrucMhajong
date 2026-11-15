@@ -112,4 +112,5 @@ var levels = [
 	"res://scenes/Niveaux/niveau4.tscn",
 	"res://scenes/Niveaux/niveau5.tscn",
 	"res://scenes/Niveaux/niveau6.tscn",
+	"res://scenes/Niveaux/niveau7.tscn",
 ]
