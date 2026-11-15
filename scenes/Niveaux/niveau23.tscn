@@ -72,4 +72,4 @@ stream = ExtResource("6_rh58s")
 pitch_scale = 2.5
 
 [node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_4fu4v")]
-position = Vector2(54, -197)
+position = Vector2(191, -68)
