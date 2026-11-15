@@ -16,6 +16,8 @@ var direction_counter : int = 0
 var movement_counter : int = 0
 var kill_counter : int = 0
 var crouched : bool = false
+var s : String = ""
+var time : int = 3
 
 var reasons_counters : Array[int] = []; # Stocker les messages déjà envoyés
 # Et exemple d'accès dans entities/super_label_moche_test/label_moche.gd
