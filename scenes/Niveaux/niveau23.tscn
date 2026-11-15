@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="5_ir4gp"]
 [ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="6_rh58s"]
 [ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="7_4fu4v"]
+[ext_resource type="PackedScene" uid="uid://bs3y5vqdmrhbg" path="res://scenes/GUI.tscn" id="8_4p6xo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jady6"]
 texture = ExtResource("1_jcj2e")
@@ -73,3 +74,5 @@ TileSize = 128
 position = Vector2(72, 40)
 stream = ExtResource("6_rh58s")
 pitch_scale = 2.5
+
+[node name="CanvasLayer" parent="." unique_id=1832535853 instance=ExtResource("8_4p6xo")]
