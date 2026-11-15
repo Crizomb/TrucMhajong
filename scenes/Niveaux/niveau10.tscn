@@ -53,6 +53,9 @@ position = Vector2(321, -317)
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("4_sfp3u")]
 position = Vector2(56, 193)
 
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_1y5r6")]
+position = Vector2(190, -200)
+
 [node name="Player" parent="." unique_id=1962365068 instance=ExtResource("5_t0sni")]
 position = Vector2(-197, 192)
 TileSize = 128
@@ -61,6 +64,3 @@ TileSize = 128
 position = Vector2(72, 40)
 stream = ExtResource("6_okalv")
 pitch_scale = 2.5
-
-[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_1y5r6")]
-position = Vector2(190, -200)
