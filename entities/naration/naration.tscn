@@ -130,3 +130,4 @@ stream = ExtResource("21_idvvt")
 
 [node name="options" type="AudioStreamPlayer2D" parent="." unique_id=293830979]
 stream = ExtResource("22_tpnr4")
+volume_db = 15.738
