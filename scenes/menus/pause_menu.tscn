@@ -44,7 +44,7 @@ corner_radius_bottom_left = 16
 texture = ExtResource("4_xiui8")
 modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
 
-[node name="Pause_menu" type="Control" unique_id=1530393981]
+[node name="Pause_menu" type="Control" unique_id=827958358]
 process_mode = 3
 visible = false
 layout_mode = 3
@@ -57,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2wrho")
 
-[node name="Background" type="Panel" parent="." unique_id=500254931]
+[node name="Background" type="Panel" parent="." unique_id=1495328407]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,7 +72,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ajnlm")
 
-[node name="Menu_buttons" type="VBoxContainer" parent="." unique_id=38870513]
+[node name="Menu_buttons" type="VBoxContainer" parent="." unique_id=91064938]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
-[node name="Resume" type="Button" parent="Menu_buttons" unique_id=1063417161]
+[node name="Resume" type="Button" parent="Menu_buttons" unique_id=945453627]
 process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
@@ -97,7 +97,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
 text = "Resume"
 
-[node name="Options" type="Button" parent="Menu_buttons" unique_id=181959848]
+[node name="Options" type="Button" parent="Menu_buttons" unique_id=1164216176]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 46
@@ -106,7 +106,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
 text = "Options"
 
-[node name="Level_select" type="Button" parent="Menu_buttons" unique_id=1441535374]
+[node name="Level_select" type="Button" parent="Menu_buttons" unique_id=418407765]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 46
@@ -115,7 +115,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
 text = "Level select"
 
-[node name="Shadow" type="Label" parent="." unique_id=988126901]
+[node name="Shadow" type="Label" parent="." unique_id=1404837532]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -132,7 +132,7 @@ text = "Menu Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title" type="Label" parent="." unique_id=1537251899]
+[node name="Title" type="Label" parent="." unique_id=964828142]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -148,7 +148,7 @@ text = "Menu Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Big_lock" type="Panel" parent="." unique_id=424572760]
+[node name="Big_lock" type="Panel" parent="." unique_id=2130338040]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -160,7 +160,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_uqow3")
 
-[node name="Small_lock" type="TextureRect" parent="." unique_id=864894032]
+[node name="Small_lock" type="TextureRect" parent="." unique_id=1440438321]
 layout_mode = 0
 offset_left = -51.0
 offset_top = 153.0
@@ -171,7 +171,7 @@ offset_transform_position = Vector2(100, 0)
 texture = ExtResource("4_xiui8")
 expand_mode = 1
 
-[node name="Small_lock_2" type="TextureRect" parent="." unique_id=1731064542]
+[node name="Small_lock_2" type="TextureRect" parent="." unique_id=1260000537]
 layout_mode = 0
 offset_left = 463.0
 offset_top = 153.0

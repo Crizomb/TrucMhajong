@@ -5,13 +5,13 @@ extends Control
 @onready var button: Button = $Button
 
 @onready var naration_dict : Dictionary[Global.DeathReason, Array] = {
-	Global.DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION : ["Pénalité pour déplacement répétitifs", audio_template],
-	Global.DeathReason.TWENTY_FIVE_MOVEMENTS : ["Pénalité pour excés de déplacements", audio_template],
-	Global.DeathReason.GREEN_GROUND : ["Pénalité parce que j'aime pas le vert", audio_template],
-	Global.DeathReason.FIVE_MOVEMENTS_SAME_COLOR : ["Pénalité pour usage abusif d'une même couleur", audio_template],
-	Global.DeathReason.CREPIERE_BROKEN : ["Pénalité parce que t'as cassé ma crépière", audio_template],
-	Global.DeathReason.UNKNOWN : ["Je devais dire un truc mais jsp quoi...", audio_template],
-	Global.DeathReason.CROUCH_CREPIERE_OFF : ["Les crêpière ne sont pas toujours allumées tu sais" , audio_template],
+	Global.DeathReason.FIVE_MOVEMENTS_SAME_DIRECTION : ["\"Pénalité pour déplacements répétitifs\"", audio_template],
+	Global.DeathReason.TWENTY_FIVE_MOVEMENTS : ["\"Pénalité pour excès de déplacements\"", audio_template],
+	Global.DeathReason.GREEN_GROUND : ["\"Pénalité parce que j'aime pas le vert\"", audio_template],
+	Global.DeathReason.FIVE_MOVEMENTS_SAME_COLOR : ["\"Pénalité pour usage abusif d'une même couleur\"", audio_template],
+	Global.DeathReason.CREPIERE_BROKEN : ["\"Pénalité parce que t'as cassé ma crépière\"", audio_template],
+	Global.DeathReason.UNKNOWN : ["\"Je devais dire un truc mais jsp quoi...\"", audio_template],
+	Global.DeathReason.CROUCH_CREPIERE_OFF : ["\"Les crêpière ne sont pas toujours allumées tu sais\"", audio_template],
 }
 
 # Called when the node enters the scene tree for the first time.

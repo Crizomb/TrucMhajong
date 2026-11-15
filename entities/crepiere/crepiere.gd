@@ -3,8 +3,9 @@ class_name Crepiere
 
 @export var _is_activated := false
 # Called when the node enters the scene tree for the first time.
-@onready var crepe_off: TextureRect = $CrepeOff
-@onready var crepe_on: TextureRect = $CrepeOn
+@onready var bilig_off: Sprite2D = $BiligOff
+@onready var bilig_on: Sprite2D = $BiligOn
+
 
 
 var buttons: Array[GameButton] = []
@@ -23,13 +24,13 @@ func _ready():
 		activate()
 
 func activate():
-	crepe_off.visible = false
-	crepe_on.visible = true
+	bilig_off.visible = false
+	bilig_on.visible = true
 	_is_activated = true
 
 func deactivate():
-	crepe_off.visible = true
-	crepe_on.visible = false
+	bilig_off.visible = true
+	bilig_on.visible = false
 	_is_activated = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
