@@ -7,19 +7,13 @@ signal button_unpressed;
 
 var is_pressed := false
 
-# @export var Door : StaticBody2D;
-@onready var button_off: Sprite2D = $ButtonOff
-@onready var button_on: Sprite2D = $ButtonOn
 
 func _on_area_entered(_area: Area2D) -> void:
-	print("area entered")
-	button_off.visible = false
-	button_on.visible = true
+	print("button pressed")
 	button_pressed.emit()
 	is_pressed = true
 
 func _on_area_exited(_area: Area2D) -> void:
+	print("button unpressed")
 	button_unpressed.emit()
-	button_off.visible = true
-	button_on.visible = false
 	is_pressed = false

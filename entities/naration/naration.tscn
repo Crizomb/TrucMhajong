@@ -35,6 +35,9 @@ offset_right = 548.0
 offset_bottom = 368.0
 theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxFlat_htawy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htawy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_htawy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_htawy")
 text = "\"Tu es mort de cause inconnue...\""
 autowrap_mode = 2
 
