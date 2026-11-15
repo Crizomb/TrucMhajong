@@ -1,0 +1,242 @@
+[gd_scene format=4 uid="uid://bhelhoekwkc8t"]
+
+[ext_resource type="Texture2D" uid="uid://bg427u1ju1xoc" path="res://entities/tilemap/tilemap.png" id="1_ao7nl"]
+[ext_resource type="Script" uid="uid://ch1jgk1ufi4mp" path="res://entities/tilemap/tile_map_logic.gd" id="2_2ldob"]
+[ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="3_0ar67"]
+[ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="4_0lv64"]
+[ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="5_3jsah"]
+[ext_resource type="Script" uid="uid://mar0j33h7p3d" path="res://entities/menu/pause menu/pause_menu.gd" id="6_3hrhs"]
+[ext_resource type="Texture2D" uid="uid://csevbnps08evv" path="res://entities/menu/pause menu/pause.png" id="7_vreyh"]
+[ext_resource type="FontFile" uid="uid://byhousucx5uiv" path="res://entities/menu/main menu/Honey Crepes.ttf" id="8_mgx61"]
+[ext_resource type="Texture2D" uid="uid://bgb3v7bqac153" path="res://entities/menu/main menu/lock.png" id="9_3f8w5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jady6"]
+texture = ExtResource("1_ao7nl")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xkn4h"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jady6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajnlm"]
+texture = ExtResource("7_vreyh")
+modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqow3"]
+bg_color = Color(0.69054794, 0.2882867, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4l1my"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_bottom = 2
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrk8l"]
+bg_color = Color(0.5443528, 0.22097152, 0, 1)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.17864138, 0.05258006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqow3"]
+texture = ExtResource("9_3f8w5")
+modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
+
+[node name="Node2D2" type="Node2D" unique_id=1947861403]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
+tile_map_data = PackedByteArray("AAAAAAAAAAAEAAEAAAABAP//AAADAAAAAAABAAEAAAADAAAAAAABAAAAAAADAAEAAAAAAP//AAADAAEAAAACAP//AAADAAEAAAACAAEAAAADAAEAAAAAAAEAAAADAAEAAAD/////AAABAAEAAAD//wAAAAABAAEAAAD//wEAAAABAAEAAAD///7/AAABAAEAAAAAAP7/AAABAAEAAAABAP7/AAABAAEAAAACAP7/AAABAAEAAAADAP7/AAABAAEAAAADAP//AAABAAEAAAADAAAAAAABAAEAAAADAAEAAAABAAEAAAD//wIAAAABAAEAAAAAAAIAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAADAAIAAAABAAEAAAAEAP7/AAABAAEAAAAFAP7/AAABAAEAAAAGAP7/AAABAAEAAAAGAP//AAABAAEAAAAFAP//AAABAAEAAAAEAP//AAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAAGAAEAAAABAAEAAAAFAAEAAAABAAEAAAAEAAEAAAABAAEAAAAEAAIAAAABAAEAAAAFAAIAAAABAAEAAAAGAAIAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD+//7/AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAD+/wEAAAABAAEAAAD+/wIAAAABAAEAAAD9/wIAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_xkn4h")
+script = ExtResource("2_2ldob")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
+position = Vector2(196, 66)
+
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("3_0ar67")]
+position = Vector2(327, 60)
+rotation = 5.270164e-05
+
+[node name="Player" parent="." unique_id=1962365068 instance=ExtResource("4_0lv64")]
+position = Vector2(64, 66)
+TileSize = 128
+
+[node name="sfx_movement" type="AudioStreamPlayer2D" parent="Player" unique_id=700157877]
+position = Vector2(72, 40)
+stream = ExtResource("5_3jsah")
+pitch_scale = 2.5
+
+[node name="Pause_menu" type="Control" parent="." unique_id=1886887544]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_3hrhs")
+
+[node name="Background" type="Panel" parent="Pause_menu" unique_id=1761485505]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -336.0
+offset_right = 961.0
+offset_bottom = 514.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ajnlm")
+
+[node name="Menu_buttons" type="VBoxContainer" parent="Pause_menu" unique_id=1078474732]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = 65.0
+offset_right = 458.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Resume" type="Button" parent="Pause_menu/Menu_buttons" unique_id=943224377]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Resume"
+
+[node name="Options" type="Button" parent="Pause_menu/Menu_buttons" unique_id=311759874]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Options"
+
+[node name="Level_select" type="Button" parent="Pause_menu/Menu_buttons" unique_id=190420544]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_uqow3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4l1my")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrk8l")
+text = "Level select"
+
+[node name="Shadow" type="Label" parent="Pause_menu" unique_id=1300965194]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = -235.0
+offset_right = 716.0
+offset_bottom = -45.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_mgx61")
+theme_override_font_sizes/font_size = 138
+text = "Menu Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="Pause_menu" unique_id=103298339]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -253.0
+offset_top = -241.0
+offset_right = 713.0
+offset_bottom = -51.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_mgx61")
+theme_override_font_sizes/font_size = 138
+text = "Menu Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Big_lock" type="Panel" parent="Pause_menu" unique_id=1435502205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uqow3")
+
+[node name="Small_lock" type="TextureRect" parent="Pause_menu" unique_id=343655593]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 153.0
+offset_right = 8.0
+offset_bottom = 212.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(100, 0)
+texture = ExtResource("9_3f8w5")
+expand_mode = 1
+
+[node name="Small_lock_2" type="TextureRect" parent="Pause_menu" unique_id=365444334]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 153.0
+offset_right = 522.0
+offset_bottom = 212.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(-100, 0)
+texture = ExtResource("9_3f8w5")
+expand_mode = 1
+
+[connection signal="button_up" from="Pause_menu/Menu_buttons/Resume" to="Pause_menu" method="_on_resume_button_up"]
+[connection signal="button_down" from="Pause_menu/Menu_buttons/Options" to="Pause_menu" method="_on_options_button_down"]
+[connection signal="button_up" from="Pause_menu/Menu_buttons/Options" to="Pause_menu" method="_on_options_button_up"]
+[connection signal="button_up" from="Pause_menu/Menu_buttons/Level_select" to="Pause_menu" method="_on_level_select_button_up"]
