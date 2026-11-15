@@ -31,6 +31,7 @@ func _ready():
 	init_player_state()
 
 func _on_change_level():
+	await get_tree().create_timer(1.0).timeout
 	current_level += 1
 	init_player_state()
 	print("Le nouveau current_level : ")
