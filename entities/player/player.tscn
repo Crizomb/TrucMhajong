@@ -63,5 +63,6 @@ label_settings = SubResource("LabelSettings_bls4j")
 stream = ExtResource("6_8fjmc")
 
 [node name="Timer" type="Timer" parent="RespectToAdam" unique_id=1761711231]
+wait_time = 2.0
 
 [connection signal="timeout" from="RespectToAdam/Timer" to="." method="_on_timer_timeout"]
