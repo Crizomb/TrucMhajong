@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://bx8g67sjqbmqf"]
+
+[ext_resource type="Texture2D" uid="uid://bg427u1ju1xoc" path="res://entities/tilemap/tilemap.png" id="1_8gyp7"]
+[ext_resource type="Script" uid="uid://ch1jgk1ufi4mp" path="res://entities/tilemap/tile_map_logic.gd" id="2_afejq"]
+[ext_resource type="PackedScene" uid="uid://dek227s5ifvkm" path="res://entities/button/button.tscn" id="3_7l4jp"]
+[ext_resource type="PackedScene" uid="uid://b783sv00gae3u" path="res://entities/box/box.tscn" id="4_1f8se"]
+[ext_resource type="PackedScene" uid="uid://bbbkrl5xihend" path="res://entities/player/player.tscn" id="5_perlu"]
+[ext_resource type="AudioStream" uid="uid://7nv4kg6q7csg" path="res://sound_music/sfx/sfx_movement.mp3" id="6_gytpr"]
+[ext_resource type="PackedScene" uid="uid://cigdu36w2nwwv" path="res://entities/crepiere/crepiere.tscn" id="7_ssam6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jady6"]
+texture = ExtResource("1_8gyp7")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xkn4h"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jady6")
+
+[node name="Node2D" type="Node2D" unique_id=1947861403]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
+tile_map_data = PackedByteArray("AAD8/wAAAAABAAEAAAD8/wEAAAABAAEAAAD8/wIAAAABAAEAAAD8/wMAAAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8/wQAAAABAAEAAAD9/wQAAAABAAEAAAD+/wQAAAABAAEAAAD//wQAAAABAAEAAAAAAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAADAAQAAAABAAEAAAAEAAQAAAABAAEAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAADAPz/AAABAAEAAAAEAPz/AAABAAEAAAD9/wMAAAAEAAEAAAD9/wIAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAAFAAAAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAEAAAD+//3/AAABAAEAAAD+//7/AAAEAAAAAAD+////AAADAAEAAAD+/wAAAAADAAEAAAD+/wEAAAABAAEAAAD+/wIAAAABAAEAAAD///7/AAADAAAAAAD/////AAABAAEAAAD//wAAAAADAAAAAAD//wEAAAABAAEAAAD//wIAAAABAAEAAAADAAMAAAAEAAAAAAAEAAMAAAABAAEAAAAEAAIAAAABAAEAAAAEAP7/AAABAAEAAAAEAP3/AAABAAEAAAAEAP//AAABAAEAAAAEAAAAAAABAAEAAAAEAAEAAAABAAEAAAD+/wMAAAADAAAAAAAAAAMAAAADAAEAAAACAAMAAAADAAAAAAAAAAEAAAABAAEAAAAAAP7/AAADAAEAAAAAAAAAAAADAAAAAAAAAAIAAAABAAEAAAABAAMAAAADAAAAAAD//wMAAAADAAEAAAD8////AAABAAEAAAD///3/AAABAAEAAAAAAP3/AAABAAEAAAAAAP//AAABAAEAAAABAAIAAAABAAEAAAADAAIAAAADAAEAAAACAAEAAAAEAAAAAAABAAAAAAADAAEAAAADAAAAAAADAAAAAAACAP//AAABAAEAAAABAP7/AAAEAAAAAAACAP7/AAADAAAAAAABAP//AAABAAEAAAACAAAAAAADAAEAAAABAAEAAAABAAEAAAACAAIAAAADAAEAAAADAAEAAAADAAAAAAABAP3/AAABAAEAAAACAP3/AAADAAAAAAADAP3/AAABAAEAAAADAP7/AAADAAEAAAADAP//AAABAAEAAAA=")
+tile_set = SubResource("TileSet_xkn4h")
+script = ExtResource("2_afejq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
+position = Vector2(140, 73)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Button" parent="." unique_id=454183045 instance=ExtResource("3_7l4jp")]
+position = Vector2(453, -189)
+
+[node name="Box2" parent="." unique_id=754094967 instance=ExtResource("4_1f8se")]
+position = Vector2(-193, 449)
+
+[node name="Box3" parent="." unique_id=1024020810 instance=ExtResource("4_1f8se")]
+position = Vector2(61, -191)
+
+[node name="Box4" parent="." unique_id=1116801497 instance=ExtResource("4_1f8se")]
+position = Vector2(192, 64)
+
+[node name="Box5" parent="." unique_id=496794573 instance=ExtResource("4_1f8se")]
+position = Vector2(-67, -191)
+
+[node name="Player" parent="." unique_id=1962365068 instance=ExtResource("5_perlu")]
+position = Vector2(-324, 447)
+TileSize = 128
+
+[node name="sfx_movement" type="AudioStreamPlayer2D" parent="Player" unique_id=700157877]
+position = Vector2(72, 40)
+stream = ExtResource("6_gytpr")
+pitch_scale = 2.5
+
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_ssam6")]
+position = Vector2(319, -323)
