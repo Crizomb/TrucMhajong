@@ -82,7 +82,6 @@ position = Vector2(72, 40)
 stream = ExtResource("6_j6fkb")
 pitch_scale = 2.5
 
-[node name="CanvasLayer" parent="." unique_id=1832535853 instance=ExtResource("8_ruwqd")]
-
 [node name="PointLight2D" parent="." unique_id=1065185849 instance=ExtResource("9_6r7bf")]
-position = Vector2(190, 41)
+
+[node name="CanvasLayer" parent="." unique_id=1832535853 instance=ExtResource("8_ruwqd")]
