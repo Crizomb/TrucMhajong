@@ -44,6 +44,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Restart"):
 		Global.restart_level()
 		Global.init_player_state()
+		Global.kill_counter += 1
 	
 	if Input.is_action_just_pressed("RespectToAdam"):
 		start_respect_to_adam()
