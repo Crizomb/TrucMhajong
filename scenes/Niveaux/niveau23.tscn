@@ -51,7 +51,7 @@ position = Vector2(576, 193)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(64, 66)
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.6, 0.6)
 
 [node name="Box3" parent="." unique_id=1024020810 instance=ExtResource("4_nybvs")]
 position = Vector2(318, 62)
