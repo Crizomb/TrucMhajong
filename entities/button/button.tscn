@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dek227s5ifvkm"]
 
 [ext_resource type="Script" uid="uid://dgocnxyhkauay" path="res://entities/button/button.gd" id="1_6bgj0"]
-[ext_resource type="Texture2D" uid="uid://b5xdmxl6wtdrq" path="res://entities/button/switch.png" id="2_7gf2j"]
+[ext_resource type="Texture2D" uid="uid://bxrd4fkwn2x8q" path="res://entities/crepiere/bilig_off.png" id="2_7gf2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k228g"]
 size = Vector2(120, 120)
@@ -15,6 +15,7 @@ shape = SubResource("RectangleShape2D_k228g")
 
 [node name="Switch" type="Sprite2D" parent="." unique_id=801427662]
 position = Vector2(0, -3)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7gf2j")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

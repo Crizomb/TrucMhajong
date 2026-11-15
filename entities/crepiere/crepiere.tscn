@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cigdu36w2nwwv"]
 
 [ext_resource type="Script" uid="uid://dqylixwu81fxk" path="res://entities/crepiere/crepiere.gd" id="1_erkw8"]
-[ext_resource type="Texture2D" uid="uid://bxrd4fkwn2x8q" path="res://entities/crepiere/bilig_off.png" id="2_0cxb7"]
-[ext_resource type="Texture2D" uid="uid://dhjcxs6j5ic68" path="res://entities/crepiere/bilig_on.png" id="3_hxpb8"]
+[ext_resource type="Texture2D" uid="uid://768hcoh87elp" path="res://entities/crepiere/bilig_eteint.png" id="2_0cxb7"]
+[ext_resource type="Texture2D" uid="uid://cibi1w1ambbfh" path="res://entities/crepiere/bilig_allume.png" id="4_hxpb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erkw8"]
 size = Vector2(236, 232)
@@ -16,13 +16,15 @@ position = Vector2(3, 7)
 shape = SubResource("RectangleShape2D_erkw8")
 
 [node name="BiligOff" type="Sprite2D" parent="." unique_id=1815934945]
-position = Vector2(0, 10)
+position = Vector2(3.0000153, 8.000004)
+scale = Vector2(1.8281252, 1.8125001)
 texture = ExtResource("2_0cxb7")
 
-[node name="BiligOn" type="Sprite2D" parent="." unique_id=1774214347]
+[node name="BiligOn" type="Sprite2D" parent="." unique_id=457346542]
 visible = false
-position = Vector2(0, 10)
-texture = ExtResource("3_hxpb8")
+position = Vector2(4.000004, 7.000002)
+scale = Vector2(1.84375, 1.796875)
+texture = ExtResource("4_hxpb8")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
