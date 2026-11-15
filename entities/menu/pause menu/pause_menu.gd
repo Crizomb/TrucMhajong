@@ -28,5 +28,6 @@ func _on_options_button_down() -> void:
 	big_lock.visible = true
 
 func _on_level_select_button_up() -> void:
+	Global.movement_counter = 0
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menus/level_select_menu.tscn")
