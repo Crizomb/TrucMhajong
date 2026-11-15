@@ -5,6 +5,7 @@ extends Node
 
 signal box_moved(box: Box);
 signal naration_label;
+signal metal_pipe;
 signal test_crepiere;
 
 signal switch_to_menu;

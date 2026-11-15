@@ -26,6 +26,7 @@ func _on_options_button_up() -> void:
 
 func _on_options_button_down() -> void:
 	big_lock.visible = true
+	Global.metal_pipe.emit()
 
 func _on_level_select_button_up() -> void:
 	Global.movement_counter = 0

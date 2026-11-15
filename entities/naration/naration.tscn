@@ -69,10 +69,11 @@ autowrap_mode = 2
 
 [node name="crepiere_off" type="AudioStreamPlayer2D" parent="." unique_id=462565774]
 stream = ExtResource("2_rufhj")
-volume_db = 24.0
+volume_db = 12.0
 
 [node name="help_level_4" type="AudioStreamPlayer2D" parent="." unique_id=2105753497]
 stream = ExtResource("3_bg07o")
+volume_db = 10.0
 
 [node name="Intro_1" type="AudioStreamPlayer2D" parent="." unique_id=705740603]
 stream = ExtResource("4_lu2ok")
@@ -80,55 +81,73 @@ volume_db = 10.0
 
 [node name="Intro_2" type="AudioStreamPlayer2D" parent="." unique_id=1359411872]
 stream = ExtResource("5_gf3pu")
+volume_db = 10.0
 
 [node name="Intro_3" type="AudioStreamPlayer2D" parent="." unique_id=396240515]
 stream = ExtResource("6_gtc1d")
+volume_db = 10.0
 
 [node name="Intro_4" type="AudioStreamPlayer2D" parent="." unique_id=1419244691]
 stream = ExtResource("7_fd7mn")
+volume_db = 10.0
 
 [node name="Intro_10" type="AudioStreamPlayer2D" parent="." unique_id=2082597084]
 stream = ExtResource("8_d2qlh")
+volume_db = 10.0
 
 [node name="Intro_11" type="AudioStreamPlayer2D" parent="." unique_id=476681707]
 stream = ExtResource("9_eu1qv")
+volume_db = 10.0
 
 [node name="Intro_13" type="AudioStreamPlayer2D" parent="." unique_id=1206135237]
 stream = ExtResource("10_ppf8x")
+volume_db = 9.0
 
 [node name="Intro_14" type="AudioStreamPlayer2D" parent="." unique_id=1210326395]
 stream = ExtResource("11_oxlvv")
+volume_db = 8.0
 
 [node name="Intro_20" type="AudioStreamPlayer2D" parent="." unique_id=419822516]
 stream = ExtResource("12_mrmog")
+volume_db = 10.0
 
 [node name="Intro_21" type="AudioStreamPlayer2D" parent="." unique_id=1835198546]
 stream = ExtResource("13_wcx7k")
+volume_db = 9.0
 
 [node name="Intro_22" type="AudioStreamPlayer2D" parent="." unique_id=111749042]
 stream = ExtResource("14_p0aaj")
+volume_db = 9.0
 
 [node name="Intro_23" type="AudioStreamPlayer2D" parent="." unique_id=1817153193]
 stream = ExtResource("15_uji3f")
+volume_db = 9.0
 
 [node name="Intro_24" type="AudioStreamPlayer2D" parent="." unique_id=1108107471]
 stream = ExtResource("16_qwt21")
+volume_db = 10.0
 
 [node name="mort_5_couleurs" type="AudioStreamPlayer2D" parent="." unique_id=70283622]
 stream = ExtResource("17_kga0f")
+volume_db = 10.0
 
 [node name="mort_5_dirs" type="AudioStreamPlayer2D" parent="." unique_id=2142950595]
 stream = ExtResource("18_4nb4n")
+volume_db = 13.0
 
 [node name="mort_25_mouvements" type="AudioStreamPlayer2D" parent="." unique_id=1076789118]
 stream = ExtResource("19_ctwns")
+volume_db = 13.0
 
 [node name="mort_crepiere_cassee" type="AudioStreamPlayer2D" parent="." unique_id=1171798976]
 stream = ExtResource("20_fw52s")
+volume_db = 11.0
 
 [node name="mort_sol_vert" type="AudioStreamPlayer2D" parent="." unique_id=369449834]
 stream = ExtResource("21_idvvt")
+volume_db = 13.0
 
 [node name="options" type="AudioStreamPlayer2D" parent="." unique_id=293830979]
+process_mode = 3
 stream = ExtResource("22_tpnr4")
 volume_db = 15.738

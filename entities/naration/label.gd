@@ -60,6 +60,7 @@ func _ready() -> void:
 		show_text(Global.s, Global.time)
 	Global.s = ""
 	Global.naration_label.connect(_on_naration_label)
+	Global.metal_pipe.connect(_on_metal_pipe)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
@@ -72,6 +73,9 @@ func show_text(s: String, time: float):
 	button.visible = true
 	await get_tree().create_timer(time).timeout
 	button.visible = false
+
+func _on_metal_pipe():
+	options.play()
 
 func _on_naration_label(t : Global.DeathReason):
 	var metadata = naration_dict.get(t, naration_dict[Global.DeathReason.UNKNOWN])

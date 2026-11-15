@@ -22,4 +22,4 @@ func _on_options_button_up() -> void:
 
 func _on_options_button_down() -> void:
 	big_lock.visible = true
-	Global.naration_label.emit(Global.DeathReason.OPTIONS_MENU)
+	Global.metal_pipe.emit()
