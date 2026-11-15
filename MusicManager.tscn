@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b14x7kgxcjilk"]
+
+[ext_resource type="Script" uid="uid://di73aq3sbiarl" path="res://music_manager.gd" id="1_73e63"]
+[ext_resource type="AudioStream" uid="uid://c180jqvste87q" path="res://sound_music/music/intro_titre.wav" id="1_wavqy"]
+[ext_resource type="AudioStream" uid="uid://b3hb02woudsif" path="res://sound_music/music/loop_titre.wav" id="2_73e63"]
+[ext_resource type="AudioStream" uid="uid://bjtib3666iurp" path="res://sound_music/music/intro_niveau.wav" id="3_qjlvf"]
+[ext_resource type="AudioStream" uid="uid://bvwdhyatr8p5u" path="res://sound_music/music/loop_niveau.wav" id="4_3mv01"]
+
+[node name="MusicManager" type="Node" unique_id=513213101]
+script = ExtResource("1_73e63")
+
+[node name="IntroMenu" type="AudioStreamPlayer" parent="." unique_id=1422595751]
+stream = ExtResource("1_wavqy")
+
+[node name="LoopMenu" type="AudioStreamPlayer" parent="." unique_id=497100092]
+stream = ExtResource("2_73e63")
+
+[node name="IntroLevel" type="AudioStreamPlayer" parent="." unique_id=330021669]
+stream = ExtResource("3_qjlvf")
+
+[node name="LoopLevel" type="AudioStreamPlayer" parent="." unique_id=760288602]
+stream = ExtResource("4_3mv01")

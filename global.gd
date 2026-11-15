@@ -7,6 +7,9 @@ signal box_moved(box: Box);
 signal naration_label;
 signal test_crepiere;
 
+signal switch_to_menu;
+signal switch_to_gameplay;
+
 var current_level : int = 0
 var last_direction : Direction = Direction.NONE
 var direction_counter : int = 0
