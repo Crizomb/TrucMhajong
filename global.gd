@@ -103,7 +103,7 @@ func _on_toggle_crouch_player():
 		test_crepiere.emit()
 
 func restart_level():
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene.call_deferred()
 	
 # Gestion des niveaux
 var levels = [
