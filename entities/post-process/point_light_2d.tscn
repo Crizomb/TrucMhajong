@@ -3,14 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://dve5ljufprjvs" path="res://entities/post-process/new_noise_texture_2d.tres" id="1_8ihnj"]
 [ext_resource type="Script" uid="uid://deh3mm1ssan25" path="res://entities/post-process/point_light_2d.gd" id="2_xeqwj"]
 
-[node name="PointLight2D" type="PointLight2D" unique_id=1065185849]
+[node name="PointLight2D" type="CanvasLayer" unique_id=1524694809]
 scale = Vector2(2, 2)
-color = Color(0.85490197, 1, 1, 1)
-texture = ExtResource("1_8ihnj")
+transform = Transform2D(2, 0, 0, 2, 0, 0)
 script = ExtResource("2_xeqwj")
 
 [node name="Timer" type="Timer" parent="." unique_id=1288105763]
 wait_time = 1.5
 autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=311020023]
+offset_left = -76.5
+offset_top = -92.0
+offset_right = 640.5
+offset_bottom = 420.0
+texture = ExtResource("1_8ihnj")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

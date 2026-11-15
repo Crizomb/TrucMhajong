@@ -46,53 +46,53 @@ tile_set = SubResource("TileSet_xkn4h")
 script = ExtResource("2_1h34b")
 
 [node name="Button" parent="." unique_id=1561398429 instance=ExtResource("3_kc7n6")]
-position = Vector2(-63, 197)
+position = Vector2(-63, 194)
 
 [node name="Button2" parent="." unique_id=1297284468 instance=ExtResource("3_kc7n6")]
-position = Vector2(194, 196)
+position = Vector2(194, 194)
 
 [node name="Button3" parent="." unique_id=1226982314 instance=ExtResource("3_kc7n6")]
-position = Vector2(192, -63)
+position = Vector2(194, -62)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(64, 66)
 zoom = Vector2(0.6, 0.6)
 
 [node name="Box3" parent="." unique_id=1024020810 instance=ExtResource("4_s2h67")]
-position = Vector2(61, 442)
+position = Vector2(64, 447)
 
 [node name="Box4" parent="." unique_id=1301113614 instance=ExtResource("4_s2h67")]
 position = Vector2(-321, 322)
 
 [node name="Box5" parent="." unique_id=93210790 instance=ExtResource("4_s2h67")]
-position = Vector2(-198, 443)
+position = Vector2(-191, 447)
 
 [node name="Box6" parent="." unique_id=1384595538 instance=ExtResource("4_s2h67")]
-position = Vector2(445, 64)
+position = Vector2(447, 64)
 
 [node name="Box7" parent="." unique_id=444260918 instance=ExtResource("4_s2h67")]
-position = Vector2(448, 315)
+position = Vector2(451, 318)
 
 [node name="Box8" parent="." unique_id=1335050359 instance=ExtResource("4_s2h67")]
-position = Vector2(321, 445)
+position = Vector2(320, 450)
 
 [node name="Box9" parent="." unique_id=731906935 instance=ExtResource("4_s2h67")]
-position = Vector2(-197, -318)
+position = Vector2(-192, -318)
 
 [node name="Box10" parent="." unique_id=1173034270 instance=ExtResource("4_s2h67")]
-position = Vector2(67, -318)
+position = Vector2(65, -320)
 
 [node name="Box11" parent="." unique_id=928410257 instance=ExtResource("4_s2h67")]
-position = Vector2(324, -320)
+position = Vector2(321, -320)
 
 [node name="Box12" parent="." unique_id=575877935 instance=ExtResource("4_s2h67")]
-position = Vector2(442, -204)
+position = Vector2(449, -192)
 
 [node name="Box13" parent="." unique_id=1756827551 instance=ExtResource("4_s2h67")]
-position = Vector2(194, -191)
+position = Vector2(192, -192)
 
 [node name="Box14" parent="." unique_id=2096391909 instance=ExtResource("4_s2h67")]
-position = Vector2(190, 58)
+position = Vector2(193, 63)
 
 [node name="Box15" parent="." unique_id=1074709878 instance=ExtResource("4_s2h67")]
 position = Vector2(-321, 62)
@@ -101,16 +101,16 @@ position = Vector2(-321, 62)
 position = Vector2(-319, -189)
 
 [node name="Box17" parent="." unique_id=1935063075 instance=ExtResource("4_s2h67")]
-position = Vector2(62, 190)
+position = Vector2(65, 190)
 
 [node name="Box18" parent="." unique_id=1557856173 instance=ExtResource("4_s2h67")]
-position = Vector2(-72, 67)
+position = Vector2(-63, 64)
 
 [node name="Box19" parent="." unique_id=25826906 instance=ExtResource("4_s2h67")]
-position = Vector2(60, -63)
+position = Vector2(64, -65)
 
 [node name="Box20" parent="." unique_id=1319875067 instance=ExtResource("4_s2h67")]
-position = Vector2(-66, 307)
+position = Vector2(-63, 318)
 
 [node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("7_tyg66")]
 position = Vector2(61, 60)
