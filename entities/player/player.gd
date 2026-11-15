@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 		move_direction(direction)
 	if Input.is_action_just_pressed("Restart"):
 		Global.restart_level()
+		Global.init_player_state()
 
 func move_direction(direction: Global.Direction):
 	var moved : bool = false
