@@ -13,8 +13,8 @@ extends Control
 	Global.DeathReason.UNKNOWN : ["\"Je devais dire un truc mais jsp quoi...\"", audio_template],
 	Global.DeathReason.CROUCH_CREPIERE_OFF : ["\"Les crêpière ne sont pas toujours allumées tu sais\"", audio_template],
 
-	Global.DeathReason.FIVE_DEATHS_LEVEL_1 : ["\"Je devais dire un truc mais jsp quoi...\"", audio_template],
-	Global.DeathReason.OPTIONS_MENU : ["\"Je devais dire un truc mais jsp quoi...\"", audio_template],
+	Global.DeathReason.FIVE_DEATHS_LEVEL_4 : ["\"Il est parfois sage de retourner sur ses pas\"", audio_template],
+	Global.DeathReason.OPTIONS_MENU : ["\"Ta seule option est de jouer\"", audio_template],
 	Global.DeathReason.NARATION_INTRO_LEVEL_1 : ["\"Tu es une crêpe, et tu veux cuire. Comment ça tu ne ressembles pas à une crêpe, vas y appuie sur shift sur la crêpière  !\"", audio_template],
 	Global.DeathReason.NARATION_INTRO_LEVEL_2 : ["\"Le bouton... il sert à.... je sais plus t'as qu'à essayer toi !\"", audio_template],
 	Global.DeathReason.NARATION_INTRO_LEVEL_3 : ["\"Un peu plus de travail n'a jamais fait de mal à quiconque \"", audio_template],
@@ -30,7 +30,7 @@ extends Control
 	Global.DeathReason.NARATION_INTRO_LEVEL_23 : ["\"J'ai trouvé plusieurs solutions moi !\"", audio_template],
 	Global.DeathReason.NARATION_INTRO_LEVEL_24 : ["\"Qui a mis toutes les boites ici ? \"", audio_template],
 	Global.DeathReason.NARATION_INTRO_LEVEL_30 : ["\"Pas assez de boites à mon goût\"", audio_template],
-	Global.DeathReason.NARATION_END_LEVEL_30 : ["\"Je devais dire un truc mais jsp quoi...\"", audio_template],
+	Global.DeathReason.NARATION_END_LEVEL_30 : ["\"Ouah... ça fait beaucoup de crêpes, j'ai plus faim moi !\"", audio_template],
 }
 
 # Called when the node enters the scene tree for the first time.
