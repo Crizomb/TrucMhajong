@@ -11,12 +11,16 @@ script = ExtResource("1_73e63")
 
 [node name="IntroMenu" type="AudioStreamPlayer" parent="." unique_id=1422595751]
 stream = ExtResource("1_wavqy")
+volume_db = -15.0
 
 [node name="LoopMenu" type="AudioStreamPlayer" parent="." unique_id=497100092]
 stream = ExtResource("2_73e63")
+volume_db = -15.0
 
 [node name="IntroLevel" type="AudioStreamPlayer" parent="." unique_id=330021669]
 stream = ExtResource("3_qjlvf")
+volume_db = -5.0
 
 [node name="LoopLevel" type="AudioStreamPlayer" parent="." unique_id=760288602]
 stream = ExtResource("4_3mv01")
+volume_db = -5.0

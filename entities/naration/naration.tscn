@@ -69,13 +69,14 @@ autowrap_mode = 2
 
 [node name="crepiere_off" type="AudioStreamPlayer2D" parent="." unique_id=462565774]
 stream = ExtResource("2_rufhj")
+volume_db = 24.0
 
 [node name="help_level_4" type="AudioStreamPlayer2D" parent="." unique_id=2105753497]
 stream = ExtResource("3_bg07o")
 
 [node name="Intro_1" type="AudioStreamPlayer2D" parent="." unique_id=705740603]
 stream = ExtResource("4_lu2ok")
-volume_db = 11.664
+volume_db = 10.0
 
 [node name="Intro_2" type="AudioStreamPlayer2D" parent="." unique_id=1359411872]
 stream = ExtResource("5_gf3pu")
