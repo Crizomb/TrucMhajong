@@ -39,6 +39,8 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	current_area = area
+	if area is BoxArea:
+		Global.kill_player.emit(Global.DeathReason.CREPIERE_BROKEN)
 
 func _test_crepiere():
 	if current_area is Player and _is_activated:
