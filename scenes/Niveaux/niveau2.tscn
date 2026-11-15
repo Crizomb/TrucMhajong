@@ -36,7 +36,7 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_jady6")
 
-[node name="Node2D" type="Node2D" unique_id=1947861403]
+[node name="Node2D2" type="Node2D" unique_id=1947861403]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
 tile_map_data = PackedByteArray("AAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAACAAEAAAABAAEAAAACAAAAAAABAAEAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAACAP3/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//3/AAABAAEAAAD+//7/AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAD///7/AAADAAAAAAABAP7/AAADAAAAAAABAAAAAAADAAAAAAD//wAAAAAEAAEAAAAAAP//AAADAAAAAAAAAAAAAAADAAEAAAABAP//AAADAAEAAAAAAP7/AAADAAEAAAD/////AAADAAEAAAD9//7/AAABAAEAAAD9////AAABAAEAAAD8////AAABAAEAAAD9/wAAAAABAAEAAAD9//3/AAABAAEAAAD9/wEAAAABAAEAAAADAAEAAAABAAEAAAADAAAAAAABAAEAAAADAP//AAABAAEAAAADAP7/AAABAAEAAAD8//3/AAABAAEAAAD8//7/AAABAAEAAAADAP3/AAABAAEAAAAEAP3/AAABAAEAAAAEAP7/AAABAAEAAAAEAP//AAABAAEAAAAEAAAAAAABAAEAAAAEAAEAAAABAAEAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8//z/AAABAAEAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAADAPz/AAABAAEAAAAEAPz/AAABAAEAAAA=")
@@ -46,11 +46,14 @@ script = ExtResource("2_a3uc7")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(61, -68)
 
-[node name="Button" parent="." unique_id=454183045 groups=["button"] instance=ExtResource("5_0p4xx")]
+[node name="Button" parent="." unique_id=454183045 instance=ExtResource("5_0p4xx")]
 position = Vector2(66, -184)
 
 [node name="Box2" parent="." unique_id=754094967 instance=ExtResource("6_wmj4b")]
 position = Vector2(65, -62)
+
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_fq7xr")]
+position = Vector2(188, -64)
 
 [node name="Player" parent="." unique_id=1962365068 instance=ExtResource("7_ab78u")]
 position = Vector2(-62, 65)
@@ -60,6 +63,3 @@ TileSize = 128
 position = Vector2(72, 40)
 stream = ExtResource("8_hmfxb")
 pitch_scale = 2.5
-
-[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_fq7xr")]
-position = Vector2(188, -64)

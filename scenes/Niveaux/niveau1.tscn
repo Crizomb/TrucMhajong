@@ -77,7 +77,7 @@ corner_radius_bottom_left = 16
 texture = ExtResource("9_fnsis")
 modulate_color = Color(0.74978, 0.74978, 0.74977994, 1)
 
-[node name="Node2D" type="Node2D" unique_id=1947861403]
+[node name="Node2D2" type="Node2D" unique_id=1947861403]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1119246778]
 tile_map_data = PackedByteArray("AAAAAAAAAAAEAAEAAAABAP//AAADAAAAAAABAAEAAAADAAAAAAABAAAAAAADAAEAAAAAAP//AAADAAEAAAACAP//AAADAAEAAAACAAEAAAADAAEAAAAAAAEAAAADAAEAAAD/////AAABAAEAAAD//wAAAAABAAEAAAD//wEAAAABAAEAAAD///7/AAABAAEAAAAAAP7/AAABAAEAAAABAP7/AAABAAEAAAACAP7/AAABAAEAAAADAP7/AAABAAEAAAADAP//AAABAAEAAAADAAAAAAABAAEAAAADAAEAAAABAAEAAAD//wIAAAABAAEAAAAAAAIAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAADAAIAAAABAAEAAAAEAP7/AAABAAEAAAAFAP7/AAABAAEAAAAGAP7/AAABAAEAAAAGAP//AAABAAEAAAAFAP//AAABAAEAAAAEAP//AAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAAGAAEAAAABAAEAAAAFAAEAAAABAAEAAAAEAAEAAAABAAEAAAAEAAIAAAABAAEAAAAFAAIAAAABAAEAAAAGAAIAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD+//7/AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAEAAAD+/wEAAAABAAEAAAD+/wIAAAABAAEAAAD9/wIAAAABAAEAAAA=")
@@ -87,6 +87,10 @@ script = ExtResource("2_58t8e")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1171450978]
 position = Vector2(196, 66)
 
+[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_ciu0c")]
+position = Vector2(327, 60)
+rotation = 5.270164e-05
+
 [node name="Player" parent="." unique_id=1962365068 instance=ExtResource("7_5juys")]
 position = Vector2(64, 66)
 TileSize = 128
@@ -95,10 +99,6 @@ TileSize = 128
 position = Vector2(72, 40)
 stream = ExtResource("8_taqyl")
 pitch_scale = 2.5
-
-[node name="Crepiere" parent="." unique_id=949437595 instance=ExtResource("9_ciu0c")]
-position = Vector2(327, 60)
-rotation = 5.270164e-05
 
 [node name="Pause_menu" type="Control" parent="." unique_id=1886887544]
 process_mode = 3
